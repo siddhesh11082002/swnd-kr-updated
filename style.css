@@ -1,0 +1,489 @@
+/* Global Styles */
+body {
+  font-family: 'Tiro Devanagari Marathi', serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(13, 71, 161, 0.8);
+  color: white;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px; 
+  width: auto; 
+  display: block; 
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffca28;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: #0d47a1; /* Background color of the button */
+  border: none; /* Remove default button border */
+  padding: 10px; /* Padding around the icon */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.toggle-btn i {
+  color: white; /* Color of the bars icon */
+  font-size: 24px; /* Size of the bars icon */
+  transition: transform 0.3s ease; /* Smooth transition for icon transform */
+}
+
+.toggle-btn:hover {
+  background-color: #ffca28; /* Change background color on hover */
+}
+
+.toggle-btn:active i {
+  transform: rotate(90deg); /* Rotate the icon when the button is active (clicked) */
+}
+
+.toggle-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px #ffca28; /* Add custom focus outline */
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(13, 71, 161, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    border-top: 1px solid white;
+    color: white;
+  }
+
+  .mobile-menu.hidden {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('images/ban1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  animation: background-animation 15s infinite;
+}
+
+@keyframes background-animation {
+  0% { background-image: url('images/ban1.jpg'); }
+  33% { background-image: url('images/ban4.jpg'); }
+  66% { background-image: url('images/ban3.jpg'); }
+  100% { background-image: url('images/ban4.jpg'); }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #ffca28;
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.hero-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #28a745;
+}
+
+@media (min-width: 768px) {
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.hero-button:hover {
+  background-color: #ff8f00;
+}
+
+.donation-button {
+  background-color: #00f06c;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.donation-button:hover {
+  background-color: #007924;
+}
+
+/* About Section Styles */
+.about-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+  color: #333;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Email Section Styles */
+.email-section {
+  background-color: white;
+  padding: 60px 0;
+  color: #333;
+}
+
+.email-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.email-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.email-button, .membership-button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.email-button:hover, .membership-button:hover {
+  background-color: #ff8f00;
+}
+
+.email-button {
+  float: right;
+}
+
+/* Representatives Section Styles */
+.representatives-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.representatives-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.representative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.representative-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.representative-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0d47a1;
+}
+
+.representative-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Membership Section Styles */
+.membership-section {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.membership-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.membership-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.gallery-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Voice Section Styles */
+.voice-section {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.voice-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.voice-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voice-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.voice-card h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #0d47a1;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff8f00;
+}
+
+/* Footer Styles */
+.footer-section {
+  background-color: #0d47a1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content a {
+  color: #ffca28;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content .social-links {
+  margin-top: 10px;
+}
+
+.footer-content .social-links a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-content .social-links a:hover {
+  color: #ffca28;
+}
