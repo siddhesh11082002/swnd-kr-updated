@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const donationButton = document.querySelector('.donation-button');
   donationButton.addEventListener('click', function (event) {
     event.preventDefault();
-    window.open('https://yourdonationpage.com', '_blank'); // Open in new tab
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); // Open in new tab
   });
 });
