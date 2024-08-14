@@ -19,17 +19,74 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const heroSection = document.querySelector('.hero-section');
+  const imagePaths = [
+      'images/banner/ban1.jpg',
+      'images/banner/ban2.jpg',
+      'images/banner/ban3.jpg',
+      'images/banner/ban4.jpg',
+      'images/banner/ban5.jpg',
+      'images/banner/ban6.jpg',
+      'images/banner/ban7.jpg',
+      'images/banner/ban8.jpg',
+      'images/banner/ban9.jpg',
+      'images/banner/ban10.jpg'
+      // Add more paths as necessary
+  ];
+
+let currentIndex = 0;
+
+function changeBackgroundImage() {
+    heroSection.style.backgroundImage = `url('${imagePaths[currentIndex]}')`;
+    currentIndex = (currentIndex + 1) % imagePaths.length; // Loop back to the first image
+}
+
+setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
+
+
   // Email Button
-  const emailButton = document.querySelector('.email-button');
+  const emailbutton = document.querySelector('.email-button');
   emailButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.location.href = 'mailto:railmin@rb.railnet.gov.in?subject=Regarding%20Sawantwadi%20Terminus&body=Please%20take%20necessary%20actions%20for%20the%20completion%20of%20Sawantwadi%20Terminus';
+    var recipients = "Cm@maharashtra.gov.in,cmpro@maharashtra.gov.in,dcm@maharashtra.gov.in,secy-road@nic.in,secy.cmd@krcl.co.in,ashwini.vaishnav@gmail.com,moeitoffice@gmail.com,vsomannavijayanagara@gmail.com,ravneetbittu@gmail.com,connect@mygov.nic.in,ravindrachavan.mla@gmail.com,narayanrane52@gmail.com,narayan.rane@sansad.nic.in,speakerrsn1@gmail.com,waikarravindra@gmail.com,secy.rb-mh@nic.in,pacollsin@gmail.com,home_transport5@maharashtra.gov.in,acs.transport@maharashtra.gov.in,officeofmr@gov.in,secy-road@nic.in,Collector.ratnagiri@maharashtra.gov.in,Collector.raigad@maharashtra.gov.in,officeofmr@gov.in,mosr@rb.railnet.gov.in,mos-railways@gov.in";
+    var cc = "kesarkardeepak@gmail.com,udaysamant11@gmail.com,niranjanvdavkhare@gmail.com,secy.cmd@krcl.co.in,secgm@cr.railnet.gov.in,rrmrn@krcl.co.in,cpro@cr.railnet.gov.in,nnr23682@gmail.com,shekhargnikam@gmail.com,mla@rajupatilmns.com,rajan825@gmail.com,vnaik95@gmail.com,sureshgmhatre333@gmail.com";
+    var bcc = "girishrane007@gmail.com,swaditerminus@gmail.com";
+    var subject = "कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी  जनआंदोलन";
+    var body = "प्रति,\n\nश्री एकनाथ शिंदे साहेब,\nमुख्यमंत्री,\nमहाराष्ट्र राज्य.\n\nश्री नितीन गडकरी साहेब,\nकेंद्रीय परिवहन मंत्री,\n\nश्री अश्विनी वैष्णव साहेब,\nकेंद्रीय रेल्वे मंत्री\n\nविषय - कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी जनआंदोलन\n\nमहोदय,\n\nआम्ही, कोकणप्रातांतील त्रस्त कोकणकर आपले या मेल मोहिमेद्वारे कोकणातील मुलभुत गरजांबाबत लक्ष वेधू इच्छितो की कोकण ही परशुरामाची पद पावणाने स्पर्शित झालेली देवभूमी असून येथील पर्यटन स्थळे ही जगप्रसिद्ध आहे. आपल्याला माहीत आहे की सिंधुदुर्ग जिल्हा हा देशातील पहिला पर्यटन जिल्हा जाहीर होऊन २५ वर्षाचा काळ लोटला पण पर्यटनाला हवी तशी उभारी किंवा पायाभुत सुविधा आजतागायत मिळाली नाही. याचे कारण पर्यटनासाठी गाभा असलेल्या सर्वोत्तम दळणवळणाची सुविधा.\n\nकोकणची जीवन वहिनी व शास्वत विकासासाठी आवश्यक असलेल्या मुंबई गोवा महामार्ग आणि कोकण रेल्वे.\nमुंबई गोवा महामार्ग हा गेली १७ वर्ष रखडला, गणेशोत्सव तोंडावर आला असूनही महामार्ग पूर्ण खड्ड्यात गेला आहे.\nकोकण रेल्वे हे महामंडळ असल्याने त्याला अर्थसंकल्पीय तरतूद ही होत नाही व त्यामुळे प्रवासी सुविधांचाही कमतरता आहे गाड्या व तिकिट कोटा मिळत नाही सबब ह्या महामंडळाचे भारतीय रेल्वेत विलीनीकरण करावे,\nनिधी अभावी रखडलेले सावंतवाडी येथील नियोजित रेल्वे टर्मिनस गेली भूमिपूजन होऊन ९ वर्ष रखडले. तेही पूर्णत्वास नेऊन त्याचा तेथून मुंबईसाठी कायम नवीन गाड्या चालू कराव्यात.\n\nवरिल मागण्यासांठी गेली २ वर्ष सातत्याने प्रयास व प्रशासनाकडे पाठपुरावा करूनही कोकणकरांच्या हाती काहीच लागले नाही. त्यामुळे आम्ही समस्त कोकणवासी व कोकणवासीयांच्या सलंग्न संघटना १५ ऑगस्ट २०२४ स्वातंत्र्याचा ७८ व्या सोहळ्यादिवशी *मुंबई गोवा महामार्ग जन आक्रोश समिती यांचे माणगाव येथील आमरण उपोषण, कोकण रेल्वे प्रवासी संघटना-सावंतवाडी यांचे सावंतवाडी रेल्वे स्थानक येथील घंटानाद आंदोलन, आणि कोकण रेल्वे संघर्ष आणि समन्वय समिती सिंधुदुर्ग यांचे जिल्हाधिकारी कार्यालय सिंधुदुर्ग येथे होणारे लाक्षणिक उपोषणाला पाठिंबा देत आहोत.\nतरी आपण कोकणच्या शास्वत विकास व मुलभुत सोयीसुविंधासाठी कार्यरत होत कोकणकरांना न्याय द्याल हि अपेक्षा!\n\nआमच्या मागण्या खालील प्रमाणे,\n(कृपया तिन्ही PDF फाईल पहाव्यात.)\n\nआपले विनीत,\n\nकोकणप्रांतातील त्रस्त कोकणकर\n(मुंबई ठाणे पालघर रायगड रत्नागिरी सिंधुदुर्ग)";
+  
+      // PDF file links
+      var pdfLinks = "\n\nकृपया खालील PDF फाइल्स पहा:\n" +
+                      "1. [Folder 1]https://drive.google.com/drive/folders/1Ipa97i5l1WBFs6sxDxZdF3ZWvjSu2U-i?usp=drive_link";
+  
+      var emailLink = "mailto:" + encodeURIComponent(recipients) +
+                      "?cc=" + encodeURIComponent(cc) +
+                      "&bcc=" + encodeURIComponent(bcc) +
+                      "&subject=" + encodeURIComponent(subject) +
+                      "&body=" + encodeURIComponent(body + pdfLinks);
+  
+      // Create temporary anchor element
+      var tempLink = document.createElement('a');
+      tempLink.setAttribute('href', emailLink);
+  
+      // Append anchor element to body
+      document.body.appendChild(tempLink);
+  
+      // Trigger the email client
+      tempLink.click();
+  
+      // Clean up
+      document.body.removeChild(tempLink);  
   });
+
+   //extra  Email Button
+   const extraemailbutton = document.querySelector('.extra-email-button');
+   emailButton.addEventListener('click', function (event) {
+     event.preventDefault();
+   });
 
   // Donation Button
   const donationButton = document.querySelector('.donation-button');
   donationButton.addEventListener('click', function (event) {
     event.preventDefault();
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); // Open in new tab
+    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
   });
 });

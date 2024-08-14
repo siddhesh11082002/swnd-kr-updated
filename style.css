@@ -17,24 +17,33 @@ body {
 .navbar {
   background-color: rgba(13, 71, 161, 0.8);
   color: white;
-  padding: 10px 0;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  height: 60px; /* Set height of the navbar */
+  
+  align-items: center; /* Center items vertically within the navbar */
+  position: fixed; /* Fix the navbar at the top */
+  width: 100%; /* Ensure the navbar spans the full width */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left edge */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Ensure vertical alignment of items */
+  height: 100%; /* Full height of the navbar */
 }
 
-.logo-image {
-  height: 40px; 
+.logo-image{
+  height: 30px; 
   width: auto; 
-  display: block; 
-}
+} 
 
 .navbar .logo {
   display: flex;
-  align-items: center;
+  align-items: center; /* Center the logo vertically */
 }
 
 .navbar .nav-links a {
@@ -59,7 +68,7 @@ body {
 .toggle-btn {
   background-color: #0d47a1; /* Background color of the button */
   border: none; /* Remove default button border */
-  padding: 10px; /* Padding around the icon */
+  padding: 8px; /* Adjust padding to fit within the navbar */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
@@ -67,7 +76,7 @@ body {
 
 .toggle-btn i {
   color: white; /* Color of the bars icon */
-  font-size: 24px; /* Size of the bars icon */
+  font-size: 24px; /* Adjust icon size to fit the navbar */
   transition: transform 0.3s ease; /* Smooth transition for icon transform */
 }
 
@@ -91,7 +100,7 @@ body {
 
   #nav-toggle {
     display: block;
-    font-size: 24px;
+    font-size: 24px; /* Adjust font size for mobile */
     color: white;
     cursor: pointer;
   }
@@ -101,7 +110,7 @@ body {
     flex-direction: column;
     background-color: rgba(13, 71, 161, 0.9);
     position: absolute;
-    top: 60px;
+    top: 60px; /* Position below the fixed navbar */
     right: 0;
     width: 100%;
     text-align: center;
@@ -126,7 +135,7 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url('images/ban1.jpg');
+  background-image: url('images/ban2.jpg');
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -136,15 +145,17 @@ body {
   position: relative;
   text-align: center;
   color: white;
-  animation: background-animation 15s infinite;
+ 
 }
 
-@keyframes background-animation {
-  0% { background-image: url('images/ban1.jpg'); }
-  33% { background-image: url('images/ban2.jpg'); }
-  66% { background-image: url('images/ban3.jpg'); }
-  100% { background-image: url('images/ban4.jpg'); }
-}
+/*
+animation: background-animation 15s infinite;
+ @keyframes background-animation {
+  0% { background-image: url('images/banner/ban1.jpg'); }
+  33% { background-image: url('images/banner/ban2.jpg'); }
+  66% { background-image: url('images/banner/ban3.jpg'); }
+  100% { background-image: url('images/banner/ban4.jpg'); }
+} */
 
 .hero-section::before {
   content: "";
