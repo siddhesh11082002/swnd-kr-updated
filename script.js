@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'images/banner/ban8.jpg',
       'images/banner/ban9.jpg',
       'images/banner/ban10.jpg'
-      // Add more paths as necessary
-  ];
+      ];
 
 let currentIndex = 0;
 
@@ -46,7 +45,9 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
 
   // Email Button
   const emailbutton = document.querySelector('.email-button');
-  emailButton.addEventListener('click', function (event) {
+  emailbutton.addEventListener('click', function (event) {
+
+    console.log("email section")
     var recipients = "Cm@maharashtra.gov.in,cmpro@maharashtra.gov.in,dcm@maharashtra.gov.in,secy-road@nic.in,secy.cmd@krcl.co.in,ashwini.vaishnav@gmail.com,moeitoffice@gmail.com,vsomannavijayanagara@gmail.com,ravneetbittu@gmail.com,connect@mygov.nic.in,ravindrachavan.mla@gmail.com,narayanrane52@gmail.com,narayan.rane@sansad.nic.in,speakerrsn1@gmail.com,waikarravindra@gmail.com,secy.rb-mh@nic.in,pacollsin@gmail.com,home_transport5@maharashtra.gov.in,acs.transport@maharashtra.gov.in,officeofmr@gov.in,secy-road@nic.in,Collector.ratnagiri@maharashtra.gov.in,Collector.raigad@maharashtra.gov.in,officeofmr@gov.in,mosr@rb.railnet.gov.in,mos-railways@gov.in";
     var cc = "kesarkardeepak@gmail.com,udaysamant11@gmail.com,niranjanvdavkhare@gmail.com,secy.cmd@krcl.co.in,secgm@cr.railnet.gov.in,rrmrn@krcl.co.in,cpro@cr.railnet.gov.in,nnr23682@gmail.com,shekhargnikam@gmail.com,mla@rajupatilmns.com,rajan825@gmail.com,vnaik95@gmail.com,sureshgmhatre333@gmail.com";
     var bcc = "girishrane007@gmail.com,swaditerminus@gmail.com";
@@ -79,7 +80,7 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
 
    //extra  Email Button
    const extraemailbutton = document.querySelector('.extra-email-button');
-   emailButton.addEventListener('click', function (event) {
+   extraemailbutton.addEventListener('click', function (event) {
      event.preventDefault();
    });
 
@@ -89,4 +90,77 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
     event.preventDefault();
     window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
   });
+
+/*gallery section */
+
+    const galleryGrid = document.getElementById('gallery-grid');
+    const newsGrid = document.getElementById('news-grid');
+    
+    const galleryFolder = 'images/gallery/';
+    const galleryImages = [];
+    for (let i = 1; i <= 30; i++) {
+        galleryImages.push(`FB_${i}.jpg`);
+    }
+
+    galleryImages.forEach(image => {
+        const imgElement = document.createElement('a');
+        imgElement.href = `${galleryFolder}${image}`;
+        imgElement.className = 'gallery-item';
+        
+        const imageTag = document.createElement('img');
+        imageTag.src = `${galleryFolder}${image}`;
+        imageTag.alt = 'Gallery Image';
+        imageTag.className = 'gallery-image';
+
+        // Error handling for image loading
+        imageTag.onerror = function() {
+            this.src = 'images/placeholder.jpg'; // Fallback image
+            this.alt = 'Image not available'; // Fallback alt text
+        };
+
+        imgElement.appendChild(imageTag);
+        galleryGrid.appendChild(imgElement);
+    });
+
+    // Initialize Magnific Popup for gallery
+    $('.gallery-item').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    const newsFolder = 'images/news/';
+    const newsImages = [];
+    for (let i = 1; i <= 30; i++) {
+        newsImages.push(`NW_${i}.jpg`);
+    }
+
+    newsImages.forEach(image => {
+        const articleElement = document.createElement('a');
+        articleElement.href = `${newsFolder}${image}`;
+        articleElement.className = 'news-item';
+        
+        const imgElement = document.createElement('img');
+        imgElement.src = `${newsFolder}${image}`;
+        imgElement.alt = 'News Article';
+        imgElement.className = 'news-image';
+
+        // Error handling for image loading
+        imgElement.onerror = function() {
+            this.src = 'images/placeholder.jpg'; // Fallback image
+            this.alt = 'Image not available'; // Fallback alt text
+        };
+        
+        articleElement.appendChild(imgElement);
+        newsGrid.appendChild(articleElement);
+    });
+
+    // Initialize Magnific Popup for news
+    $('.news-item').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
 });
