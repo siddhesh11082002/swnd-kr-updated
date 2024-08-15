@@ -74,7 +74,9 @@ donationButton.addEventListener('click', function (event) {
   
       // PDF file links
       var pdfLinks = "\n\nकृपया खालील PDF फाइल्स पहा:\n" +
-                      "1. [म ुंबई गोवा महामागग जनआक्रोश सममती](https://drive.google.com/file/d/1Knc4Cyl80u-fsPLThW38nBkfmm1KGunp/view?usp=drive_link)"+ "2. [कोकण रेल्वे समन्वय व संघर्ष समिती-सिंधुदुर्ग](https://drive.google.com/file/d/1WqGZ-QzUWx_tR6ZBDaYPVaiCRoUPyOw8/view?usp=drive_link)" + " 3. [कोकण रेल्वे प्रवासी संघटना, सावंतवाडी](https://drive.google.com/file/d/1Zp0Rduftyx9B2AOmht7UR7bxNxSfQ0XB/view?usp=drive_link) ";
+      "1. [म ुंबई गोवा महामागग जनआक्रोश सममती](https://drive.google.com/file/d/1Knc4Cyl80u-fsPLThW38nBkfmm1KGunp/view?usp=drive_link)\n" + 
+      "2. [कोकण रेल्वे समन्वय व संघर्ष समिती-सिंधुदुर्ग](https://drive.google.com/file/d/1WqGZ-QzUWx_tR6ZBDaYPVaiCRoUPyOw8/view?usp=drive_link)\n" + 
+      "3. [कोकण रेल्वे प्रवासी संघटना, सावंतवाडी](https://drive.google.com/file/d/1Zp0Rduftyx9B2AOmht7UR7bxNxSfQ0XB/view?usp=drive_link)";
   
       var emailLink = "mailto:" + encodeURIComponent(recipients) +
                       "?cc=" + encodeURIComponent(cc) +
