@@ -19,19 +19,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  //hero section 
   const heroSection = document.querySelector('.hero-section');
-  const imagePaths = [
-      'images/banner/ban1.jpg',
-      'images/banner/ban2.jpg',
-      'images/banner/ban3.jpg',
-      'images/banner/ban4.jpg',
-      'images/banner/ban5.jpg',
-      'images/banner/ban6.jpg',
-      'images/banner/ban7.jpg',
-      'images/banner/ban8.jpg',
-      'images/banner/ban9.jpg',
-      'images/banner/ban10.jpg'
-      ];
+const imagePaths = [
+    'images/banner/ban1.jpg',
+    'images/banner/ban2.jpg',
+    'images/banner/ban3.jpg',
+    'images/banner/ban4.jpg',
+    'images/banner/ban5.jpg',
+    'images/banner/ban6.jpg',
+    'images/banner/ban7.jpg',
+    'images/banner/ban8.jpg',
+    'images/banner/ban9.jpg',
+    'images/banner/ban10.jpg'
+];
+
+// Preload images
+function preloadImage(src) {
+    const img = new Image();
+    img.src = src;
+}
+
+// Preload the first image
+preloadImage(imagePaths[0]);
 
 let currentIndex = 0;
 
@@ -40,7 +50,15 @@ function changeBackgroundImage() {
     currentIndex = (currentIndex + 1) % imagePaths.length; // Loop back to the first image
 }
 
-setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
+// Change image every 4 seconds
+setInterval(changeBackgroundImage, 4000);
+
+// Donation Button
+const donationButton = document.querySelector('.donation-button');
+donationButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
+});
 
 
   // Email Button
@@ -56,7 +74,7 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
   
       // PDF file links
       var pdfLinks = "\n\nकृपया खालील PDF फाइल्स पहा:\n" +
-                      "1. [Folder 1]https://drive.google.com/drive/folders/1Ipa97i5l1WBFs6sxDxZdF3ZWvjSu2U-i?usp=drive_link";
+                      "1. [म ुंबई गोवा महामागग जनआक्रोश सममती](https://drive.google.com/file/d/1Knc4Cyl80u-fsPLThW38nBkfmm1KGunp/view?usp=drive_link)"+ "2. [कोकण रेल्वे समन्वय व संघर्ष समिती-सिंधुदुर्ग](https://drive.google.com/file/d/1WqGZ-QzUWx_tR6ZBDaYPVaiCRoUPyOw8/view?usp=drive_link)" + " 3. [कोकण रेल्वे प्रवासी संघटना, सावंतवाडी](https://drive.google.com/file/d/1Zp0Rduftyx9B2AOmht7UR7bxNxSfQ0XB/view?usp=drive_link) ";
   
       var emailLink = "mailto:" + encodeURIComponent(recipients) +
                       "?cc=" + encodeURIComponent(cc) +
@@ -83,13 +101,6 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
    extraemailbutton.addEventListener('click', function (event) {
      event.preventDefault();
    });
-
-  // Donation Button
-  const donationButton = document.querySelector('.donation-button');
-  donationButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
-  });
 
 /*gallery section */
 
@@ -164,3 +175,4 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
         }
     });
 });
+
