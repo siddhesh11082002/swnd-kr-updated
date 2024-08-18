@@ -208,3 +208,56 @@ donationButton.addEventListener('click', function (event) {
     });
 });
 
+// representive grid 
+
+const representatives = [
+    { name: "ॲड. संदीप निंबाळकर", position: "अध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. सागर तळवडेकर", position: "उपाध्यक्ष , सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. सागर नाणोसकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री.विनायक गांवस", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. सिद्धेश सावंत", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "अॅड. श्री. नंदन वेंगुर्लेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "अॅड. श्री. नकुल पार्सेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. जगदीश मांजरेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. रविंद्र ओगले", position: "खजिनदार", image: "images/representative/representative.png" },
+    { name: "श्री. विहंग गोठोस्कर", position: "सहखजिनदार", image: "images/representative/representative.png" },
+    { name: "मिहिर मठकर", position: "सचिव", image: "images/representative/representative.png" },
+    { name: "अॅड. सी. सापली दुभाषी", position: "सहसचिव", image: "images/representative/representative.png" },
+    { name: "श्री. भुषण बांदिवडेकर", position: "तालुका / ग्राम संपर्क , सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "सी. अर्चना घारे-परब", position: "महिला संघटना अध्यक्षा", image: "images/representative/representative.png" },
+    { name: "श्री. बवन साळगावकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. भाई देऊलकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. अभिमन्यू लोंढे", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. रविंद्र बोंद्रे", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. समिर वंजारी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. महेश परूळेकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. रफिक मेमन", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. बाळासाहेब बोर्डेकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. शेखर पाडगांवकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. पुंडलिक दळवी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. सुभाष शिरसाट", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. हिदायतुल्ला खान", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. बाबल वाडकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. देव्या सुर्याजी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. अमोल टेंबकर", position: "प्रेस मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. समिर घोंगे", position: "सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. चंद्रकांत बांदेकर", position: "शिष्टमंडळ अध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. तेजस पोयेकर", position: "शिष्टमंडळ उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. केशव नाईक", position: "शिष्टमंडळ उपाध्यक्ष", image: "images/representative/representative.png" }
+];
+
+const representativeGrid = document.querySelector('.representative-grid');
+
+representatives.forEach(representative => {
+    const card = document.createElement('div');
+    card.classList.add('representative-card');
+    
+    card.innerHTML = `
+        <img src="${representative.image}" alt="${representative.name}" class="representative-image">
+        <h3>${representative.name}</h3>
+        <p>${representative.position}</p>
+    `;
+    
+    representativeGrid.appendChild(card);
+});
+
