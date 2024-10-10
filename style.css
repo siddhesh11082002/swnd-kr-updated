@@ -1,0 +1,971 @@
+/* Global Styles */
+body {
+  font-family: 'Tiro Devanagari Marathi', serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(13, 71, 161, 0.8);
+  color: white;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  height: 60px; /* Set height of the navbar */
+  
+  align-items: center; /* Center items vertically within the navbar */
+  position: fixed; /* Fix the navbar at the top */
+  width: 100%; /* Ensure the navbar spans the full width */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left edge */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure vertical alignment of items */
+  height: 100%; /* Full height of the navbar */
+}
+
+.logo-image{
+  height: 30px; 
+  width: auto; 
+} 
+
+.navbar .logo {
+  display: flex;
+  align-items: center; /* Center the logo vertically */
+}
+
+.navbar .nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffca28;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: #0d47a1; /* Background color of the button */
+  border: none; /* Remove default button border */
+  padding: 8px; /* Adjust padding to fit within the navbar */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.toggle-btn i {
+  color: white; /* Color of the bars icon */
+  font-size: 24px; /* Adjust icon size to fit the navbar */
+  transition: transform 0.3s ease; /* Smooth transition for icon transform */
+}
+
+.toggle-btn:hover {
+  background-color: #ffca28; /* Change background color on hover */
+}
+
+.toggle-btn:active i {
+  transform: rotate(90deg); /* Rotate the icon when the button is active (clicked) */
+}
+
+.toggle-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px #ffca28; /* Add custom focus outline */
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+    font-size: 24px; /* Adjust font size for mobile */
+    color: white;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(13, 71, 161, 0.9);
+    position: absolute;
+    top: 60px; /* Position below the fixed navbar */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    border-top: 1px solid white;
+    color: white;
+  }
+
+  .mobile-menu.hidden {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('images/ban2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+ 
+}
+
+/*
+animation: background-animation 15s infinite;
+ @keyframes background-animation {
+  0% { background-image: url('images/banner/ban1.jpg'); }
+  33% { background-image: url('images/banner/ban2.jpg'); }
+  66% { background-image: url('images/banner/ban3.jpg'); }
+  100% { background-image: url('images/banner/ban4.jpg'); }
+} */
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #ffca28;
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.hero-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #28a745;
+}
+
+@media (min-width: 768px) {
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.hero-button:hover {
+  background-color: #ff8f00;
+}
+
+.donation-button {
+  background-color: #00f06c;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.donation-button:hover {
+  background-color: #007924;
+}
+
+/* About Section Styles */
+.about-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+  color: #333;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Email Section Styles */.email-section {
+  background-color: white;
+  padding: 60px 0;
+  color: #333;
+}
+
+.responsive-container {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.email-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.email-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+ .email-button  { /* , .extra-email-button */
+  background-color: #0d47a1;
+  color: white;
+  margin: 20px auto 0 auto;  /* Center the button */
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  width: fit-content;  /* Adjust width to content */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: block;  /* Ensures button takes up block space and centers properly */
+}
+
+.email-button:hover, .membership-button:hover {
+  background-color: #ff8f00;
+}
+
+/* .extra-email-button:hover{
+  
+  background-color: #6B3B07;
+} */
+
+@media (max-width: 600px) {
+  .email-section h2 {
+    font-size: 1.25em;
+  }
+
+  .email-section p {
+    font-size: 0.9em;
+  }
+
+  .email-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+  
+  /* .extra-email-button{
+    padding: 8px 16px;
+    font-size: 0.9em;
+  } */
+}
+/* 
+.extra-container {
+  text-align: center;
+  color: #6B3B07;
+}
+
+.extra-main-text {
+ 
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.extra-sub-text {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.extra-note {
+  font-size: 20px;
+} */
+
+/* Representatives Section Styles */
+.representatives-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.representatives-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+/* Make the grid horizontally scrollable */
+.representative-grid {
+  display: flex; /* Use flexbox for horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Space between cards */
+  padding-bottom: 20px; /* Add padding at the bottom */
+  scroll-snap-type: x mandatory; /* Smooth snap scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.representative-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 0 0 auto; /* Prevent the card from shrinking or growing */
+  width: 250px; /* Set a fixed width for each card */
+  scroll-snap-align: start; /* Align each card at the start of the scroll container */
+}
+
+.representative-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0d47a1;
+}
+
+.representative-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+/* Custom Scrollbar Styles */
+.representative-grid::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height for horizontal scrolling */
+}
+
+.representative-grid::-webkit-scrollbar-track {
+  background-color: #e3f2fd; /* Match the background color of the section */
+}
+
+.representative-grid::-webkit-scrollbar-thumb {
+  background-color: #abcbfa; /* Match the theme color */
+  border-radius: 10px; /* Round the scrollbar thumb */
+  border: 2px solid #e3f2fd; /* Add a border to match the background and make the scrollbar thumb more prominent */
+}
+
+.representative-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #06428e; /* Darken the scrollbar thumb on hover */
+}
+
+/* Membership Section Styles */
+.membership-section {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.membership-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.membership-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: justify;
+}
+
+.membership-button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+/* Gallery Section Styles */
+.gallery-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.gallery-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* Custom Scrollbar Styles for Gallery Grid */
+.gallery-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gallery-grid::-webkit-scrollbar-track {
+  background-color: #e3f2fd;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+  background-color: #abcbfa;
+  border-radius: 10px;
+  border: 2px solid #e3f2fd;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #06428e;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* News Section Styles */
+.news-section {
+  background-color: #f9fbe7;
+  padding: 60px 0;
+}
+
+.news-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* Custom Scrollbar Styles for News Grid */
+.news-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-grid::-webkit-scrollbar-track {
+  background-color: #e3f2fd;
+}
+
+.news-grid::-webkit-scrollbar-thumb {
+  background-color: #abcbfa;
+  border-radius: 10px;
+  border: 2px solid #f9fbe7;
+}
+
+.news-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #06428e;
+}
+
+/* Common Image Styles */
+.gallery-image,
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder Styles */
+.gallery-image[src*="placeholder.jpg"],
+.news-image[src*="placeholder.jpg"] {
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 150px;
+  color: #aaa;
+}
+
+
+/* Voice Section Styles */
+.voice-section {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.voice-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.voice-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voice-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.voice-card h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #0d47a1;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #0d47a1; /* Slight dark blue border */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 96%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0d47a1; /* Dark blue border on focus */
+}
+
+.contact-form button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff8f00;
+}
+
+/* Footer Styles */
+.footer-section {
+  background-color: #0d47a1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content a {
+  color: #ffca28;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content .social-links {
+  margin-top: 10px;
+}
+
+.footer-content .social-links a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-content .social-links a:hover {
+  color: #ffca28;
+}
+/* Global Styles */
+:root {
+  --primary-bg: #fcee35;
+  --primary-text: #010101;
+  --accent-color: #ed3537;
+  --secondary-bg: #fefefe;
+  --link-color: #aa538a;
+}
+
+body {
+  font-family: 'Tiro Devanagari Marathi', serif;
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--secondary-bg);
+  color: var(--primary-text);
+  padding: 10px 10px;
+  box-sizing: border-box;
+  height: 60px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-image {
+  height: 30px; 
+  width: auto; 
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: var(--link-color);
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--accent-color);
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn i {
+  color: var(--secondary-bg);
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: var(--link-color);
+}
+
+.toggle-btn:active i {
+  transform: rotate(90deg);
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--link-color);
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+    font-size: 24px;
+    color: var(--primary-text);
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-bg);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    border-top: 1px solid var(--primary-text);
+    color: var(--link-color);
+  }
+
+  .mobile-menu.hidden {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('images/ban2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: var(--secondary-bg);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--primary-bg);
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.hero-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-bg);
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.hero-button:hover {
+  background-color: var(--link-color);
+}
+
+.donation-button {
+  background-color: var(--link-color);
+  color: var(--secondary-bg);
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.donation-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Continue updating the rest of the CSS following the same pattern... */
+
+/* Footer Styles */
+.footer-section {
+  background-color: var(--secondary-bg);
+  color: var(--primary-text);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content .social-links {
+  margin-top: 10px;
+}
+
+.footer-content .social-links a {
+  margin: 0 10px;
+  color: var(--primary-text);
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-content .social-links a:hover {
+  color: var(--accent-color);
+}
