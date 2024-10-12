@@ -64,70 +64,67 @@ donationButton.addEventListener('click', function (event) {
 
   // Email Button
   const emailbutton = document.querySelector('.email-button');
-  emailbutton.addEventListener('click', function (event) {
+emailbutton.addEventListener('click', function (event) {
 
     console.log("email section")
-    var recipients = "Cm@maharashtra.gov.in,cmpro@maharashtra.gov.in,dcm@maharashtra.gov.in,secy-road@nic.in,secy.cmd@krcl.co.in,ashwini.vaishnav@gmail.com,moeitoffice@gmail.com,vsomannavijayanagara@gmail.com,ravneetbittu@gmail.com,connect@mygov.nic.in,ravindrachavan.mla@gmail.com,narayanrane52@gmail.com,narayan.rane@sansad.nic.in,speakerrsn1@gmail.com,waikarravindra@gmail.com,secy.rb-mh@nic.in,pacollsin@gmail.com,home_transport5@maharashtra.gov.in,acs.transport@maharashtra.gov.in,officeofmr@gov.in,secy-road@nic.in,Collector.ratnagiri@maharashtra.gov.in,Collector.raigad@maharashtra.gov.in,officeofmr@gov.in,mosr@rb.railnet.gov.in,mos-railways@gov.in";
-    var cc = "kesarkardeepak@gmail.com,udaysamant11@gmail.com,niranjanvdavkhare@gmail.com,secy.cmd@krcl.co.in,secgm@cr.railnet.gov.in,rrmrn@krcl.co.in,cpro@cr.railnet.gov.in,nnr23682@gmail.com,shekhargnikam@gmail.com,mla@rajupatilmns.com,rajan825@gmail.com,vnaik95@gmail.com,sureshgmhatre333@gmail.com";
-    var bcc = "girishrane007@gmail.com,swaditerminus@gmail.com";
-    var subject = "कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी  जनआंदोलन";
-    var body = `प्रति,
+    var recipients = "Cm@maharashtra.gov.in,cmpro@maharashtra.gov.in,dcm@maharashtra.gov.in,ashwini.vaishnav@gmail.com,moeitoffice@gmail.com,vsomannavijayanagara@gmail.com,ravneetbittu@gmail.com,connect@mygov.nic.in,ravindrachavan.mla@gmail.com,narayanrane52@gmail.com,narayan.rane@sansad.nic.in,speakerrsn1@gmail.com,waikarravindra@gmail.com,secy.rb-mh@nic.in,pacollsin@gmail.com,home_transport5@maharashtra.gov.in,acs.transport@maharashtra.gov.in,officeofmr@gov.in,secy-road@nic.in,Collector.ratnagiri@maharashtra.gov.in,Collector.raigad@maharashtra.gov.in,kesarkardeepak@gmail.com,udaysamant11@gmail.com,niranjanvdavkhare@gmail.com,secy.cmd@krcl.co.in,secgm@cr.railnet.gov.in,rrmrn@krcl.co.in,cpro@cr.railnet.gov.in,nnr23682@gmail.com,shekhargnikam@gmail.com,mla@rajupatilmns.com,rajan825@gmail.com,vnaik95@gmail.com";
+    var cc = "chai2kul@gmail.com,sandipanbhumare@gmail.com,sandipanbhumare.mp@sansad.nic.in,sc.barne@sansad.nic.in,appabarne@gmail.com,nageshpatil4545@gmail.com,patil.nagesh@sansad.nic.in,udayanrajebhonsle@gmail.com,udayanraje.bhonsle@sansad.nic.in,shahuchhatrapatikop@gmail.com,shahu.chhatrapatikol@sansad.nic.in,sunil.tatkare7@gmail.com,sunil.tatkare55@sansad.nic.in,anil.desai@sansad.nic.in,email@nitingadkari.org,nitin.gadkari@nic.in,gaikwad.varsha3@gmail.com,gaikwad.varsha3@sansad.nic.in,piyush.goyal@gov.in,prataprao.jadhav@sansad.nic.in,jadhavprataprao25@gmail.com,prataprao.jadhav@gmail.com,nr.khadase@sansad.nic.in,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,amol.kolhe@sansad.nic.in,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@rediffmail.com,sanjaydinapatil@gmail.com,narayan.rane@sansad.nic.in,hemantsavara@yahoo.co.in,arvind.sawant@sansad.nic.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,smita.udaywagh@sansad.nic.in,waikarravindra@gmail.com,ramdas@sansad.nic.in,dranil.bonde@sansad.nic.in,priyanka.c19@sansad.nic.in,ashokchavan.009@sansad.nic.in,mpmilind.deora@sansad.nic.in,cdhandore.mp@sansad.nic.in,bhagwat.karad@sansad.nic.in,mp.medha@sansad.nic.in,dhananjaymahadik.mp@sansad.nic.in,praful@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in";
+    var bcc = "akhandkokanpravasiseva@gmail.com , swaditerminus@gmail.com ";
+    var subject = "Merger of Konkan Railway in Indian Railways by integrating Ratnagiri Region with Central Railway and Karwar Region with South Western Railway";
+    var body = `To,
+Hon. Shri Ashwini Vaishnav ji,
+Cabinet Minister,Railways
+Government of India.
+                
+Hon. Shri. V. Somanna ji
+MoS, Railways,
+Government of India.
 
-    श्री एकनाथ शिंदे साहेब,
-    मुख्यमंत्री,
-    महाराष्ट्र राज्य.
-    
-    श्री नितीन गडकरी साहेब,
-    केंद्रीय परिवहन मंत्री,
-    
-    श्री अश्विनी वैष्णव साहेब,
-    केंद्रीय रेल्वे मंत्री
-    
-    विषय - कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी जनआंदोलन
-    
-    महोदय,
-    
-    आम्ही, कोकणप्रातांतील त्रस्त कोकणकर आपले या मेल मोहिमेद्वारे कोकणातील मुलभुत गरजांबाबत लक्ष वेधू इच्छितो की कोकण ही परशुरामाची पद पावणाने स्पर्शित झालेली देवभूमी असून येथील पर्यटन स्थळे ही जगप्रसिद्ध आहे. आपल्याला माहीत आहे की सिंधुदुर्ग जिल्हा हा देशातील पहिला पर्यटन जिल्हा जाहीर होऊन २५ वर्षाचा काळ लोटला पण पर्यटनाला हवी तशी उभारी किंवा पायाभुत सुविधा आजतागायत मिळाली नाही. याचे कारण पर्यटनासाठी गाभा असलेल्या सर्वोत्तम दळणवळणाची सुविधा.
-    
-    कोकणची जीवन वहिनी व शास्वत विकासासाठी आवश्यक असलेल्या मुंबई गोवा महामार्ग आणि कोकण रेल्वे.
-    मुंबई गोवा महामार्ग हा गेली १७ वर्ष रखडला, गणेशोत्सव तोंडावर आला असूनही महामार्ग पूर्ण खड्ड्यात गेला आहे.
-    कोकण रेल्वे हे महामंडळ असल्याने त्याला अर्थसंकल्पीय तरतूद ही होत नाही व त्यामुळे प्रवासी सुविधांचाही कमतरता आहे गाड्या व तिकिट कोटा मिळत नाही सबब ह्या महामंडळाचे भारतीय रेल्वेत विलीनीकरण करावे,
-    निधी अभावी रखडलेले सावंतवाडी येथील नियोजित रेल्वे टर्मिनस गेली भूमिपूजन होऊन ९ वर्ष रखडले. तेही पूर्णत्वास नेऊन त्याचा तेथून मुंबईसाठी कायम नवीन गाड्या चालू कराव्यात.
-    
-    वरिल मागण्यासांठी गेली २ वर्ष सातत्याने प्रयास व प्रशासनाकडे पाठपुरावा करूनही कोकणकरांच्या हाती काहीच लागले नाही. त्यामुळे आम्ही समस्त कोकणवासी व कोकणवासीयांच्या सलंग्न संघटना १५ ऑगस्ट २०२४ स्वातंत्र्याचा ७८ व्या सोहळ्यादिवशी *मुंबई गोवा महामार्ग जन आक्रोश समिती यांचे माणगाव येथील आमरण उपोषण, कोकण रेल्वे प्रवासी संघटना-सावंतवाडी यांचे सावंतवाडी रेल्वे स्थानक येथील घंटानाद आंदोलन, आणि कोकण रेल्वे संघर्ष आणि समन्वय समिती सिंधुदुर्ग यांचे जिल्हाधिकारी कार्यालय सिंधुदुर्ग येथे होणारे लाक्षणिक उपोषणाला पाठिंबा देत आहोत.
-    तरी आपण कोकणच्या शास्वत विकास व मुलभुत सोयीसुविंधासाठी कार्यरत होत कोकणकरांना न्याय द्याल हि अपेक्षा!
-    
-    आमच्या मागण्या खालील प्रमाणे,
-    (कृपया तिन्ही PDF फाईल पहाव्यात.)
-    
-    1. मुंबई गोवा महामार्ग जनआक्रोश समिती: https://drive.google.com/file/d/1Knc4Cyl80u-fsPLThW38nBkfmm1KGunp/view?usp=sharing
-    2. कोकण रेल्वे समन्वय व संघर्ष समिती-सिंधुदुर्ग: https://drive.google.com/file/d/1WqGZ-QzUWx_tR6ZBDaYPVaiCRoUPyOw8/view?usp=sharing
-    3. कोकण रेल्वे प्रवासी संघटना, सावंतवाडी: https://drive.google.com/file/d/1Zp0Rduftyx9B2AOmht7UR7bxNxSfQ0XB/view?usp=sharing
-    
-    आपले विनीत,
-    
-    कोकणप्रांतातील त्रस्त कोकणकर
-    (मुंबई ठाणे पालघर रायगड रत्नागिरी सिंधुदुर्ग)`;
-      
-      var emailLink = "mailto:" + encodeURIComponent(recipients) +
-                      "?cc=" + encodeURIComponent(cc) +
-                      "&bcc=" + encodeURIComponent(bcc) +
-                      "&subject=" + encodeURIComponent(subject) +
-                      "&body=" + encodeURIComponent(body);
-  
-      // Create temporary anchor element
-      var tempLink = document.createElement('a');
-      tempLink.setAttribute('href', emailLink);
-  
-      // Append anchor element to body
-      document.body.appendChild(tempLink);
-  
-      // Trigger the email client
-      tempLink.click();
-  
-      // Clean up
-      document.body.removeChild(tempLink);  
-  });
+Hon. Shri Ravneet Singh Bittu ji.
+MoS, Railways,
+Government of India.
+
+Subject: Merger of Konkan Railway in Indian Railways by integrating Ratnagiri Region (Kolad to Madure) with Central Railway and Karwar Region with South Western Railway
+
+Respected Sir,
+
+Konkan Railway Corporation Limited (KRCL) was established in 1990 on a Build-Operate-Transfer (BOT) basis, primarily to complete the railway line from Roha to Thokur (Mangaluru). While Indian Railways holds a 51% stake, state contributions include Maharashtra (22%), Karnataka (15%), Goa (6%), and Kerala (6%). Initially, KRCL was to merge with Indian Railways after 15 years, but in 2008, the government opted for KRCL's independence, limiting its capacity to enhance infrastructure.
+
+As of May 29, 2024, KRCL is grappling with substantial financial difficulties, with total liabilities amounting to ₹7,337 crore, including a ₹1,500 crore bond that is due soon. Delays in funding from the ministry of railways and state governments have forced KRCL to rely on loans, hindering development efforts. The proposal for patch doubling of a 141 km route was abandoned due to a lack of allocated funds from state governments. Both the Union Ministry and the Finance Ministry also declined to finance the project since the state governments did not participate. This situation is a rare instance in the country where a railway doubling project has been dropped due to insufficient funding from state governments, largely thanks to the PSU status of Konkan Railway. Konkan Railway remains excluded from key projects, such as the Amrit Bharat Station Scheme. Also, it is not listed under High Density Network (HDN) or Highly Utilized Network (HUN) despite high passenger traffic. To address these challenges, we propose merging Konkan Railway with Indian Railways, absorbing its debts. We propose the following options for the merger in view of better passenger services.
+
+Option 1 (Integration of Roha - Madure section with Central Railway and the rest with South Western Railway): Establishing a new railway zone involves significant costs, including land acquisition, the creation of new positions, and increased administrative expenses. Therefore, it is more beneficial to integrate the Konkan Railway route into the existing railway zones. To improve operational efficiency, we propose transferring the Roha to Madure section in Maharashtra to Central Railway, while the section in Karnataka should be assigned to South Western Railway. Central Railway primarily manages most of Maharashtra, and South Western Railway covers most of Karnataka, making this arrangement logical.
+
+Option 2 (Handover the operations of Roha - Madure section to Central Railway, rest with South Western Railway and KRCL to continue as a construction authority PSU): Should the existence of Konkan Railway be deemed necessary, it should be designated to focus on construction work and then transfer it to the relevant railway zones as done in the case of Udhampur-Srinagar-Baramulla Rail Link (USBRL) project in Jammu and Kashmir where Konkan Railway has constructed the line and handed it over to Northern Railway.
+
+Passengers are the ultimate stakeholders of the railways, and we urge that our voices be prioritized in any decisions regarding the merger. We call upon Hon. Prime Minister Shri Narendra Modi, Hon. Railway Minister Shri Ashwini Vaishnav, Hon. Finance Minister Smt. Nirmala Sitharaman, Hon. Chief Minister of Maharashtra Shri Eknath Shinde, and other key leaders to expedite this historic merger. This is a significant opportunity for our leaders to leave a lasting legacy.
+
+Copy To:
+Hon. Shri. V. Somanna, Minister of State in The Ministry of Railways
+Hon. Shri. Eknath Shinde, Chief Minister, Maharashtra
+Hon. Shri. Devendra Fadnavis, Deputy Chief Minister, Maharashtra
+Hon. Shri. Ajit Pawar, Deputy Chief Minister, Maharashtra
+All concerned Members of Parliament
+All concerned Members of Legislative Assembly and Council`;
+
+    var emailLink = "mailto:" + encodeURIComponent(recipients) +
+                    "?cc=" + encodeURIComponent(cc) +
+                    "&bcc=" + encodeURIComponent(bcc) +
+                    "&subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(body);
+
+    // Create temporary anchor element
+    var tempLink = document.createElement('a');
+    tempLink.setAttribute('href', emailLink);
+
+    // Append anchor element to body
+    document.body.appendChild(tempLink);
+
+    // Trigger the email client
+    tempLink.click();
+
+    // Clean up
+    document.body.removeChild(tempLink);
+});
 
   
 
