@@ -19,19 +19,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  //hero section 
   const heroSection = document.querySelector('.hero-section');
-  const imagePaths = [
-      'images/banner/ban1.jpg',
-      'images/banner/ban2.jpg',
-      'images/banner/ban3.jpg',
-      'images/banner/ban4.jpg',
-      'images/banner/ban5.jpg',
-      'images/banner/ban6.jpg',
-      'images/banner/ban7.jpg',
-      'images/banner/ban8.jpg',
-      'images/banner/ban9.jpg',
-      'images/banner/ban10.jpg'
-      ];
+const imagePaths = [
+    'images/banner/ban1.jpg',
+    'images/banner/ban2.jpg',
+    'images/banner/ban3.jpg',
+    'images/banner/ban4.jpg',
+    'images/banner/ban5.jpg',
+    'images/banner/ban6.jpg',
+    'images/banner/ban7.jpg',
+    'images/banner/ban8.jpg',
+    'images/banner/ban9.jpg',
+    'images/banner/ban10.jpg'
+];
+
+// Preload images
+function preloadImage(src) {
+    const img = new Image();
+    img.src = src;
+
+}
+
+// Preload the first image
+preloadImage(imagePaths[0]);
 
 let currentIndex = 0;
 
@@ -40,56 +51,81 @@ function changeBackgroundImage() {
     currentIndex = (currentIndex + 1) % imagePaths.length; // Loop back to the first image
 }
 
-setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
+// Change image every 4 seconds
+setInterval(changeBackgroundImage, 4000);
+
+// Donation Button
+const donationButton = document.querySelector('.donation-button');
+donationButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
+});
 
 
   // Email Button
-  const emailbutton = document.querySelector('.email-button');
-  emailbutton.addEventListener('click', function (event) {
+const emailbutton = document.querySelector('.email-button');
+emailbutton.addEventListener('click', function (event) {
 
-    console.log("email section")
-    var recipients = "Cm@maharashtra.gov.in,cmpro@maharashtra.gov.in,dcm@maharashtra.gov.in,secy-road@nic.in,secy.cmd@krcl.co.in,ashwini.vaishnav@gmail.com,moeitoffice@gmail.com,vsomannavijayanagara@gmail.com,ravneetbittu@gmail.com,connect@mygov.nic.in,ravindrachavan.mla@gmail.com,narayanrane52@gmail.com,narayan.rane@sansad.nic.in,speakerrsn1@gmail.com,waikarravindra@gmail.com,secy.rb-mh@nic.in,pacollsin@gmail.com,home_transport5@maharashtra.gov.in,acs.transport@maharashtra.gov.in,officeofmr@gov.in,secy-road@nic.in,Collector.ratnagiri@maharashtra.gov.in,Collector.raigad@maharashtra.gov.in,officeofmr@gov.in,mosr@rb.railnet.gov.in,mos-railways@gov.in";
-    var cc = "kesarkardeepak@gmail.com,udaysamant11@gmail.com,niranjanvdavkhare@gmail.com,secy.cmd@krcl.co.in,secgm@cr.railnet.gov.in,rrmrn@krcl.co.in,cpro@cr.railnet.gov.in,nnr23682@gmail.com,shekhargnikam@gmail.com,mla@rajupatilmns.com,rajan825@gmail.com,vnaik95@gmail.com,sureshgmhatre333@gmail.com";
-    var bcc = "girishrane007@gmail.com,swaditerminus@gmail.com";
-    var subject = "कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी  जनआंदोलन";
-    var body = "प्रति,\n\nश्री एकनाथ शिंदे साहेब,\nमुख्यमंत्री,\nमहाराष्ट्र राज्य.\n\nश्री नितीन गडकरी साहेब,\nकेंद्रीय परिवहन मंत्री,\n\nश्री अश्विनी वैष्णव साहेब,\nकेंद्रीय रेल्वे मंत्री\n\nविषय - कोकणातील दळणवळणाचा गाभा असलेल्या महामार्ग आणि रेल्वे सुविधांबाबत तसेच कोकणकरांच्या पायाभुत सुविधाच्या संवैधानिक हक्कांसाठी जनआंदोलन\n\nमहोदय,\n\nआम्ही, कोकणप्रातांतील त्रस्त कोकणकर आपले या मेल मोहिमेद्वारे कोकणातील मुलभुत गरजांबाबत लक्ष वेधू इच्छितो की कोकण ही परशुरामाची पद पावणाने स्पर्शित झालेली देवभूमी असून येथील पर्यटन स्थळे ही जगप्रसिद्ध आहे. आपल्याला माहीत आहे की सिंधुदुर्ग जिल्हा हा देशातील पहिला पर्यटन जिल्हा जाहीर होऊन २५ वर्षाचा काळ लोटला पण पर्यटनाला हवी तशी उभारी किंवा पायाभुत सुविधा आजतागायत मिळाली नाही. याचे कारण पर्यटनासाठी गाभा असलेल्या सर्वोत्तम दळणवळणाची सुविधा.\n\nकोकणची जीवन वहिनी व शास्वत विकासासाठी आवश्यक असलेल्या मुंबई गोवा महामार्ग आणि कोकण रेल्वे.\nमुंबई गोवा महामार्ग हा गेली १७ वर्ष रखडला, गणेशोत्सव तोंडावर आला असूनही महामार्ग पूर्ण खड्ड्यात गेला आहे.\nकोकण रेल्वे हे महामंडळ असल्याने त्याला अर्थसंकल्पीय तरतूद ही होत नाही व त्यामुळे प्रवासी सुविधांचाही कमतरता आहे गाड्या व तिकिट कोटा मिळत नाही सबब ह्या महामंडळाचे भारतीय रेल्वेत विलीनीकरण करावे,\nनिधी अभावी रखडलेले सावंतवाडी येथील नियोजित रेल्वे टर्मिनस गेली भूमिपूजन होऊन ९ वर्ष रखडले. तेही पूर्णत्वास नेऊन त्याचा तेथून मुंबईसाठी कायम नवीन गाड्या चालू कराव्यात.\n\nवरिल मागण्यासांठी गेली २ वर्ष सातत्याने प्रयास व प्रशासनाकडे पाठपुरावा करूनही कोकणकरांच्या हाती काहीच लागले नाही. त्यामुळे आम्ही समस्त कोकणवासी व कोकणवासीयांच्या सलंग्न संघटना १५ ऑगस्ट २०२४ स्वातंत्र्याचा ७८ व्या सोहळ्यादिवशी *मुंबई गोवा महामार्ग जन आक्रोश समिती यांचे माणगाव येथील आमरण उपोषण, कोकण रेल्वे प्रवासी संघटना-सावंतवाडी यांचे सावंतवाडी रेल्वे स्थानक येथील घंटानाद आंदोलन, आणि कोकण रेल्वे संघर्ष आणि समन्वय समिती सिंधुदुर्ग यांचे जिल्हाधिकारी कार्यालय सिंधुदुर्ग येथे होणारे लाक्षणिक उपोषणाला पाठिंबा देत आहोत.\nतरी आपण कोकणच्या शास्वत विकास व मुलभुत सोयीसुविंधासाठी कार्यरत होत कोकणकरांना न्याय द्याल हि अपेक्षा!\n\nआमच्या मागण्या खालील प्रमाणे,\n(कृपया तिन्ही PDF फाईल पहाव्यात.)\n\nआपले विनीत,\n\nकोकणप्रांतातील त्रस्त कोकणकर\n(मुंबई ठाणे पालघर रायगड रत्नागिरी सिंधुदुर्ग)";
-  
-      // PDF file links
-      var pdfLinks = "\n\nकृपया खालील PDF फाइल्स पहा:\n" +
-                      "1. [Folder 1]https://drive.google.com/drive/folders/1Ipa97i5l1WBFs6sxDxZdF3ZWvjSu2U-i?usp=drive_link";
-  
-      var emailLink = "mailto:" + encodeURIComponent(recipients) +
-                      "?cc=" + encodeURIComponent(cc) +
-                      "&bcc=" + encodeURIComponent(bcc) +
-                      "&subject=" + encodeURIComponent(subject) +
-                      "&body=" + encodeURIComponent(body + pdfLinks);
-  
-      // Create temporary anchor element
-      var tempLink = document.createElement('a');
-      tempLink.setAttribute('href', emailLink);
-  
-      // Append anchor element to body
-      document.body.appendChild(tempLink);
-  
-      // Trigger the email client
-      tempLink.click();
-  
-      // Clean up
-      document.body.removeChild(tempLink);  
-  });
+    console.log("email section");
 
-   //extra  Email Button
-   const extraemailbutton = document.querySelector('.extra-email-button');
-   extraemailbutton.addEventListener('click', function (event) {
-     event.preventDefault();
-   });
+    var recipients = "ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,edpg@rb.railnet.gov.in,k.gautam@nic.in,general@krcl.co.in,secyrb@rb.railnet.gov.in,edpgmr@rb.railnet.gov.in,edpsu@rb.railnet.gov.in";
+    var cc = "";
+    var bcc = "akhandkokanpravasiseva@gmail.com,swaditerminus@gmail.com";
+    var subject = "सावंतवाडी टर्मिनसचे उद्घाटन आपल्या हस्ते व्हावे ही कोकणवासियांची भावना";
+    var body = `प्रति,
+श्री देवेंद्र सरिता गंगाधरराव फडणवीस यांसी,
+मुख्यमंत्री महाराष्ट्र राज्य.
 
-  // Donation Button
-  const donationButton = document.querySelector('.donation-button');
-  donationButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
-  });
+विषय : सावंतवाडी टर्मिनसचे उद्घाटन आपल्या हस्ते व्हावे ही कोकणवासियांची भावना.
+
+आदरणीय देवा भाऊ,
+
+आपण २०१९ वर्षीच्या विधानसभा निवडणुकीत जसे बोललात तसे २०२४ वर्षीच्या विधानसभा निवडणुकीत उशिरा का होईना पण प्रचंड बहुमताने पुन्हा आलात,
+अभिनंदन..!!
+कोकणातील जनतेने देखील महायुतीला प्रचंड बहुमताने विजयी करून आपल्याला भक्कम साथ दिलीय.
+
+देवा भाऊ, आम्हाला आठवतेय, की आपण सण २०१४ ला महाराष्ट्राचे मुख्यमंत्री बनल्यावर मा. रेल्वेमंत्री सुरेश प्रभू व मा. पालकमंत्री दीपकभाई केसरकर यांचा उपस्थितीत २७ जून २०१५ रोजी सावंतवाडी टर्मिनसचा शिलान्यास केला होता, तेव्हा कोकणी जनता आणि मुंबईस्थित चाकरमानी या घटनेने सुखावले होते, परंतु आपल्याला सांगू इच्छितो की आजतागायत या सावंतवाडी टर्मिनसचे काम पूर्ण झालेले नाही.
+आपण त्यावेळी आपल्या भूमिपूजनाचा भाषणात ह्या टर्मिनस चे उद्घाटनाला देखील आपण नक्की येऊ, आणि आपल्या हस्तेच या टर्मिनस चे उद्घाटन होईल असे संबोधिले होते, ते शब्द आज ही मला आठवतात. कारण तो प्रसंग मी आणि माझ्या कुटुंबाने याची देही याची डोळा पाहिला होता.
+
+देवा भाऊ, काळ लोटला.. बघता बघता २०२५ साल जवळ आले आणि तो क्षण पुन्हा आला, आपण पुन्हा या राज्याचे बहुमताने मुख्यमंत्री झालात आणि पुन्हा त्या टर्मिनसच्या भूमिपूजनाचा सोहळा माझ्या डोळ्यांसमोर उभा ठाकला, पुन्हा एक हळूच ती आशा जागृत झाली, मनाला सावंतवाडी टर्मिनसचे वेध पुन्हा लागले.
+
+देवा भाऊ, आपण पुन्हा आलात, आणि तुमच्या सोबत माजी मुख्यमंत्री, कोकणचे भाग्यविधाते आणि या मतदारसंघाचे खासदार श्री नारायणराव राणे आहेत, सोबत सावंतवाडीचे आदरणीय भाई, अर्थातच दीपक भाई, हिंदुत्वाचे उभरते नेतृत्व आणि या जिल्ह्याचे पालकमंत्री श्री नितेश राणे, आमदार श्री निलेश राणे, आमदार आणि आपल्या पक्षाचे कार्यकारी अध्यक्ष श्री रवी दादा ही सिंधुदुर्ग जिल्ह्यातील दिग्गज नेते मंडळी आहेतच,
+
+देवा भाऊ, आपण शिलान्यास केलेले सावंतवाडी टर्मिनसचा कोनशिला आपली वाट बघतोय, त्या कोनशिलेला आपण द्याल का न्याय..? येथील टर्मिनस प्रेमी जनता आपली जिवाच्या आकांताने आपल्याला साद घालत आहे, आपण त्यांना द्याल का साथ..?
+
+देवा भाऊ, कोकण रेल्वे महामंडळ या सावंतवाडी टर्मिनसला पूर्ण विसरून गेलाय, म्हणतोय टर्मिनस ला आलेला निधी माघारी गेला म्हणून.
+परंतु देवा भाऊ, आता कोकणी जनता या महामंडळाला नारळ देण्यावर ठाम झालाय, आपण कराल का मदत..? ह्या रेल्वे महामंडळातील महाराष्ट्र राज्याचा हिस्सा द्याल का केंद्राला..? हे महामंडळ होईल का भारतीय रेल्वे चा भाग..?
+
+देवा भाऊ, आपली दूरदृष्टी नेते अशी ओळख आहे, समृध्दीने ते दाखवून ही दिलेय. तशीच जबाबदारी आपण आमच्या छोट्याश्या सावंतवाडी टर्मिनसची देखील घ्यावी अशी आम्हा कोकणी जनतेची इच्छा आपण कराल का पूर्ण.?
+
+देवा भाऊ, या टर्मिनसची अपूर्ण कामे पूर्ण होऊन सदर टर्मिनसचे उद्घाटन हे आपल्या हस्ते व्हावे कदाचित हेच त्या विधात्याला मान्य असावे.
+
+देवा भाऊ, कोकणी जनतेची ही इच्छा आपण पूर्ण करावी, जेणेकरून कोकणी जनता आपल्या रामेश्वराकडे आपल्या उत्तम आरोग्य, भरभराटी साठी नक्कीच गाऱ्हाणे घालील हा शब्द आहे.
+आणि हो, सदर टर्मिनसला प्राध्यापक मधु दंडवते यांचे नाव द्यावे जेणेकरून ज्याने ही वास्तू घडवली त्या शिल्पकराचा योग्य सन्मान या देवभूमित राखला जाईल.
+
+आपला एक हितचिंतक,`;
+
+    var emailLink = "mailto:" + encodeURIComponent(recipients) +
+                    "?cc=" + encodeURIComponent(cc) +
+                    "&bcc=" + encodeURIComponent(bcc) +
+                    "&subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(body);
+
+    // Create temporary anchor element
+    var tempLink = document.createElement('a');
+    tempLink.setAttribute('href', emailLink);
+
+    // Append anchor element to body
+    document.body.appendChild(tempLink);
+
+    // Trigger the email client
+    tempLink.click();
+
+    // Clean up
+    document.body.removeChild(tempLink);
+});
+
+  
 
 /*gallery section */
 
@@ -164,3 +200,57 @@ setInterval(changeBackgroundImage, 4000); // Change image every 5 seconds
         }
     });
 });
+
+// representive grid 
+
+const representatives = [
+    { name: "ॲड. संदीप निंबाळकर", position: "अध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. सागर तळवडेकर", position: "उपाध्यक्ष , सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. सागर नाणोसकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री.विनायक गांवस", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. सिद्धेश सावंत", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "अॅड. श्री. नंदन वेंगुर्लेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "अॅड. श्री. नकुल पार्सेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. जगदीश मांजरेकर", position: "उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. रविंद्र ओगले", position: "खजिनदार", image: "images/representative/representative.png" },
+    { name: "श्री. विहंग गोठोस्कर", position: "सहखजिनदार", image: "images/representative/representative.png" },
+    { name: "मिहिर मठकर", position: "सचिव", image: "images/representative/representative.png" },
+    { name: "अॅड. सी. सापली दुभाषी", position: "सहसचिव", image: "images/representative/representative.png" },
+    { name: "श्री. भुषण बांदिवडेकर", position: "तालुका / ग्राम संपर्क , सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "सी. अर्चना घारे-परब", position: "महिला संघटना अध्यक्षा", image: "images/representative/representative.png" },
+    { name: "श्री. बवन साळगावकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. भाई देऊलकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. अभिमन्यू लोंढे", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. रविंद्र बोंद्रे", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. समिर वंजारी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. महेश परूळेकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. रफिक मेमन", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. बाळासाहेब बोर्डेकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. शेखर पाडगांवकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. पुंडलिक दळवी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. सुभाष शिरसाट", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. हिदायतुल्ला खान", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. बाबल वाडकर", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. देव्या सुर्याजी", position: "सल्लागार", image: "images/representative/representative.png" },
+    { name: "श्री. अमोल टेंबकर", position: "प्रेस मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. समिर घोंगे", position: "सोशल मिडिया हेड", image: "images/representative/representative.png" },
+    { name: "श्री. चंद्रकांत बांदेकर", position: "शिष्टमंडळ अध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. तेजस पोयेकर", position: "शिष्टमंडळ उपाध्यक्ष", image: "images/representative/representative.png" },
+    { name: "श्री. केशव नाईक", position: "शिष्टमंडळ उपाध्यक्ष", image: "images/representative/representative.png" }
+];
+
+const representativeGrid = document.querySelector('.representative-grid');
+
+representatives.forEach(representative => {
+    const card = document.createElement('div');
+    card.classList.add('representative-card');
+    
+    card.innerHTML = `
+        <img src="${representative.image}" alt="${representative.name}" class="representative-image">
+        <h3>${representative.name}</h3>
+        <p>${representative.position}</p>
+    `;
+    
+    representativeGrid.appendChild(card);
+});
+

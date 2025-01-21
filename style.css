@@ -1,10 +1,22 @@
+:root {
+  --primary-bg: #f0f8ff;      /* Alice Blue for primary backgrounds */
+  --primary-text: #002147;    /* Oxford Blue for text */
+  --accent-color: #00509e;    /* Sapphire Blue for accents and buttons */
+  --secondary-bg: #e6f2ff;    /* Light Blue for subtle background areas */
+  --link-color: #4682b4;      /* Steel Blue for links and interactive elements */
+  --highlight-color: #87cefa; /* Light Sky Blue for subtle highlights */
+  --border-color: #b0c4de;    /* Light Steel Blue for borders and dividers */
+  --hover-bg: #003d73;        /* Darker Sapphire Blue for hover effects */
+  --hover-link: #1e90ff;      /* Dodger Blue for hover links */
+}
+
 /* Global Styles */
 body {
   font-family: 'Tiro Devanagari Marathi', serif;
-  color: #333;
+  color: var(--primary-text);
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: var(--primary-bg);
 }
 
 .container {
@@ -15,8 +27,8 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: rgba(13, 71, 161, 0.8);
-  color: white;
+  background-color: var(--primary-bg); /* White background */
+  color: var(--primary-text); /* Dark Gray text */
   padding: 10px 10px;
   box-sizing: border-box;
   height: 60px; /* Set height of the navbar */
@@ -47,14 +59,14 @@ body {
 }
 
 .navbar .nav-links a {
-  color: white;
+  color: var(--link-color); /* Muted Purple for links */
   margin-left: 20px;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #ffca28;
+  color: var(--accent-color); /* Vivid Red for hover effect */
 }
 
 #nav-toggle {
@@ -66,7 +78,7 @@ body {
 }
 
 .toggle-btn {
-  background-color: #0d47a1; /* Background color of the button */
+  background-color: var(--accent-color); /* Vivid Red for button background */
   border: none; /* Remove default button border */
   padding: 8px; /* Adjust padding to fit within the navbar */
   border-radius: 5px; /* Rounded corners */
@@ -75,13 +87,13 @@ body {
 }
 
 .toggle-btn i {
-  color: white; /* Color of the bars icon */
+  color: var(--primary-bg); /* White color for the icon */
   font-size: 24px; /* Adjust icon size to fit the navbar */
   transition: transform 0.3s ease; /* Smooth transition for icon transform */
 }
 
 .toggle-btn:hover {
-  background-color: #ffca28; /* Change background color on hover */
+  background-color: var(--hover-bg); /* Darker red on hover */
 }
 
 .toggle-btn:active i {
@@ -90,7 +102,7 @@ body {
 
 .toggle-btn:focus {
   outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 5px #ffca28; /* Add custom focus outline */
+  box-shadow: 0 0 5px var(--highlight-color); /* Add custom focus outline (Soft Yellow) */
 }
 
 @media (max-width: 768px) {
@@ -101,14 +113,14 @@ body {
   #nav-toggle {
     display: block;
     font-size: 24px; /* Adjust font size for mobile */
-    color: white;
+    color: var(--primary-bg); /* White color for toggle icon */
     cursor: pointer;
   }
 
   .mobile-menu {
     display: flex;
     flex-direction: column;
-    background-color: rgba(13, 71, 161, 0.9);
+    background-color: rgba(13, 71, 161, 0.9); /* Background remains as-is */
     position: absolute;
     top: 60px; /* Position below the fixed navbar */
     right: 0;
@@ -119,8 +131,8 @@ body {
 
   .mobile-menu a {
     padding: 10px;
-    border-top: 1px solid white;
-    color: white;
+    border-top: 1px solid var(--border-color); /* Light gray for borders */
+    color: var(--primary-bg); /* White for mobile menu links */
   }
 
   .mobile-menu.hidden {
@@ -144,10 +156,10 @@ body {
   align-items: center;
   position: relative;
   text-align: center;
-  color: white;
- 
+  color: var(--primary-bg); /* White text */
 }
 
+/* Uncomment for background animation */
 /*
 animation: background-animation 15s infinite;
  @keyframes background-animation {
@@ -155,7 +167,8 @@ animation: background-animation 15s infinite;
   33% { background-image: url('images/banner/ban2.jpg'); }
   66% { background-image: url('images/banner/ban3.jpg'); }
   100% { background-image: url('images/banner/ban4.jpg'); }
-} */
+} 
+*/
 
 .hero-section::before {
   content: "";
@@ -164,7 +177,7 @@ animation: background-animation 15s infinite;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
   z-index: 1;
 }
 
@@ -179,7 +192,7 @@ animation: background-animation 15s infinite;
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: #ffca28;
+  color: var(--highlight-color); /* Soft Yellow for headline */
 }
 
 @media (min-width: 768px) {
@@ -194,7 +207,7 @@ animation: background-animation 15s infinite;
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: #28a745;
+  color: var(--accent-color); /* Vivid Red for subheadline */
 }
 
 @media (min-width: 768px) {
@@ -204,8 +217,8 @@ animation: background-animation 15s infinite;
 }
 
 .hero-button {
-  background-color: #0d47a1;
-  color: white;
+  background-color: var(--link-color); /* Muted Purple for button */
+  color: var(--primary-bg); /* White text */
   padding: 10px 20px;
   font-weight: bold;
   text-decoration: none;
@@ -215,12 +228,12 @@ animation: background-animation 15s infinite;
 }
 
 .hero-button:hover {
-  background-color: #ff8f00;
+  background-color: var(--hover-bg); /* Darker Red on hover */
 }
 
 .donation-button {
-  background-color: #00f06c;
-  color: white;
+  background-color: var(--highlight-color); /* Soft Yellow for donation button */
+  color: var(--primary-text); /* Dark Gray text */
   padding: 10px 20px;
   font-weight: bold;
   text-decoration: none;
@@ -230,21 +243,22 @@ animation: background-animation 15s infinite;
 }
 
 .donation-button:hover {
-  background-color: #007924;
+  background-color: var(--hover-link); /* Darker Muted Purple on hover */
 }
 
 /* About Section Styles */
+/* About Section Styles */
 .about-section {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray background */
   padding: 60px 0;
-  color: #333;
+  color: var(--primary-text); /* Dark Gray text */
 }
 
 .about-section h2 {
   font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .about-section p {
@@ -253,17 +267,18 @@ animation: background-animation 15s infinite;
   text-align: justify;
 }
 
-/* Email Section Styles */.email-section {
-  background-color: white;
+/* Email Section Styles */
+.email-section {
+  background-color: var(--primary-bg); /* White background */
   padding: 60px 0;
-  color: #333;
+  color: var(--primary-text); /* Dark Gray text */
 }
 
 .responsive-container {
-  max-width: 600px;
+  max-width: 80%;
   margin: 20px auto;
   padding: 15px;
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray for container background */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -282,7 +297,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .email-section p {
@@ -291,9 +306,9 @@ animation: background-animation 15s infinite;
   text-align: justify;
 }
 
-.email-button , .extra-email-button {
-  background-color: #0d47a1;
-  color: white;
+.email-button { 
+  background-color: var(--link-color); /* Muted Purple for button */
+  color: var(--primary-bg); /* White text */
   margin: 20px auto 0 auto;  /* Center the button */
   padding: 10px 20px;
   font-weight: bold;
@@ -305,13 +320,13 @@ animation: background-animation 15s infinite;
 }
 
 .email-button:hover, .membership-button:hover {
-  background-color: #ff8f00;
+  background-color: var(--hover-bg); /* Darker red for hover effect */
 }
 
-.extra-email-button:hover{
+/* .extra-email-button:hover{
   
-  background-color: #6B3B07;
-}
+  background-color: var(--hover-link); 
+} */
 
 @media (max-width: 600px) {
   .email-section h2 {
@@ -326,12 +341,13 @@ animation: background-animation 15s infinite;
     padding: 8px 16px;
     font-size: 0.9em;
   }
+}
   
-  .extra-email-button{
+  /* .extra-email-button{
     padding: 8px 16px;
     font-size: 0.9em;
-  }
-}
+  } */
+
 /* 
 .extra-container {
   text-align: center;
@@ -355,7 +371,7 @@ animation: background-animation 15s infinite;
 
 /* Representatives Section Styles */
 .representatives-section {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray background */
   padding: 60px 0;
 }
 
@@ -363,7 +379,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 /* Make the grid horizontally scrollable */
@@ -377,7 +393,7 @@ animation: background-animation 15s infinite;
 }
 
 .representative-card {
-  background-color: white;
+  background-color: var(--primary-bg); /* White background for cards */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -390,7 +406,7 @@ animation: background-animation 15s infinite;
 .representative-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for card titles */
 }
 
 .representative-image {
@@ -406,22 +422,22 @@ animation: background-animation 15s infinite;
 }
 
 .representative-grid::-webkit-scrollbar-track {
-  background-color: #e3f2fd; /* Match the background color of the section */
+  background-color: var(--secondary-bg); /* Match the background color of the section */
 }
 
 .representative-grid::-webkit-scrollbar-thumb {
-  background-color: #abcbfa; /* Match the theme color */
+  background-color: var(--border-color); /* Light Gray for scrollbar thumb */
   border-radius: 10px; /* Round the scrollbar thumb */
-  border: 2px solid #e3f2fd; /* Add a border to match the background and make the scrollbar thumb more prominent */
+  border: 2px solid var(--secondary-bg); /* Add a border to match the background */
 }
 
 .representative-grid::-webkit-scrollbar-thumb:hover {
-  background-color: #06428e; /* Darken the scrollbar thumb on hover */
+  background-color: var(--hover-link); /* Darken the scrollbar thumb on hover */
 }
 
 /* Membership Section Styles */
 .membership-section {
-  background-color: #f5f5f5;
+  background-color: var(--secondary-bg); /* Light Gray background */
   padding: 60px 0;
   text-align: center;
 }
@@ -429,19 +445,19 @@ animation: background-animation 15s infinite;
 .membership-section h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .membership-section p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--primary-text); /* Dark Gray text */
   text-align: justify;
 }
 
 .membership-button {
-  background-color: #0d47a1;
-  color: white;
+  background-color: var(--link-color); /* Muted Purple for button */
+  color: var(--primary-bg); /* White text */
   padding: 10px 20px;
   font-weight: bold;
   text-decoration: none;
@@ -449,10 +465,13 @@ animation: background-animation 15s infinite;
   transition: background-color 0.3s;
 }
 
+.membership-button:hover {
+  background-color: var(--hover-bg); /* Darker red for hover effect */
+}
 
 /* Gallery Section Styles */
 .gallery-section {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray background */
   padding: 60px 0;
 }
 
@@ -460,7 +479,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .gallery-grid {
@@ -479,17 +498,17 @@ animation: background-animation 15s infinite;
 }
 
 .gallery-grid::-webkit-scrollbar-track {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray for scrollbar track */
 }
 
 .gallery-grid::-webkit-scrollbar-thumb {
-  background-color: #abcbfa;
+  background-color: var(--border-color); /* Light Gray for scrollbar thumb */
   border-radius: 10px;
-  border: 2px solid #e3f2fd;
+  border: 2px solid var(--secondary-bg); /* Match section background */
 }
 
 .gallery-grid::-webkit-scrollbar-thumb:hover {
-  background-color: #06428e;
+  background-color: var(--hover-link); /* Darker purple on hover */
 }
 
 .gallery-grid img {
@@ -502,7 +521,7 @@ animation: background-animation 15s infinite;
 
 /* News Section Styles */
 .news-section {
-  background-color: #f9fbe7;
+  background-color: var(--highlight-color); /* Soft Yellow background */
   padding: 60px 0;
 }
 
@@ -510,7 +529,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .news-grid {
@@ -529,17 +548,17 @@ animation: background-animation 15s infinite;
 }
 
 .news-grid::-webkit-scrollbar-track {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray for scrollbar track */
 }
 
 .news-grid::-webkit-scrollbar-thumb {
-  background-color: #abcbfa;
+  background-color: var(--border-color); /* Light Gray for scrollbar thumb */
   border-radius: 10px;
-  border: 2px solid #f9fbe7;
+  border: 2px solid var(--highlight-color); /* Match section background */
 }
 
 .news-grid::-webkit-scrollbar-thumb:hover {
-  background-color: #06428e;
+  background-color: var(--hover-link); /* Darker purple on hover */
 }
 
 /* Common Image Styles */
@@ -556,12 +575,11 @@ animation: background-animation 15s infinite;
 /* Placeholder Styles */
 .gallery-image[src*="placeholder.jpg"],
 .news-image[src*="placeholder.jpg"] {
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg); /* Light Gray for placeholders */
   text-align: center;
   line-height: 150px;
-  color: #aaa;
+  color: var(--primary-text); /* Dark Gray for placeholder text */
 }
-
 
 /* Voice Section Styles */
 .voice-section {
@@ -595,16 +613,48 @@ animation: background-animation 15s infinite;
   line-height: 1.6;
   color: #333;
 }
+/* Voice Section Styles */
+.voice-section {
+  background-color: var(--secondary-bg); /* White background */
+  padding: 60px 0;
+}
+
+.voice-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--link-color); /* Muted Purple for heading */
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.voice-card {
+  background-color: var(--highlight-color); /* Soft Yellow for cards */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voice-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333; /* Dark Gray for text */
+}
 
 .voice-card h4 {
   font-size: 20px;
   margin-top: 10px;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for headings */
 }
 
 /* Contact Section Styles */
 .contact-section {
-  background-color: #e3f2fd;
+  background-color: var(--secondary-bg); /* Light Gray background */
   padding: 60px 0;
 }
 
@@ -612,25 +662,36 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
-  color: #0d47a1;
+  color: var(--link-color); /* Muted Purple for heading */
 }
 
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(--link-color); /* Slight dark blue border */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 96%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Light Gray border */
   border-radius: 5px;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--link-color); /* Dark blue border on focus */
+}
+
 .contact-form button {
-  background-color: #0d47a1;
+  background-color: var(--link-color); /* Muted Purple for button */
   color: white;
   padding: 10px 20px;
   font-weight: bold;
@@ -641,13 +702,13 @@ animation: background-animation 15s infinite;
 }
 
 .contact-form button:hover {
-  background-color: #ff8f00;
+  background-color: var( --hover-bg);
 }
 
 /* Footer Styles */
 .footer-section {
-  background-color: #0d47a1;
-  color: white;
+  background-color: var(--secondary-bg);
+  color: var(--primary-text);
   padding: 20px 0;
   text-align: center;
 }
@@ -663,7 +724,7 @@ animation: background-animation 15s infinite;
 }
 
 .footer-content a {
-  color: #ffca28;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -673,15 +734,42 @@ animation: background-animation 15s infinite;
 
 .footer-content .social-links {
   margin-top: 10px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the items */
+  align-items: center; /* Vertically center the items */
 }
 
 .footer-content .social-links a {
   margin: 0 10px;
-  color: white;
+  color: var(--primary-text);
   font-size: 20px;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s; /* Add transform to transition */
 }
 
 .footer-content .social-links a:hover {
-  color: #ffca28;
+  color: var(--accent-color);
+  transform: scale(1.1); /* Slightly scale up the icon on hover */
+}
+
+/* enhancement */
+
+.hero-button,
+.donation-button,
+.membership-button,
+.email-button {
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.hero-button:hover,
+.donation-button:hover,
+.membership-button:hover,
+.email-button:hover {
+    transform: scale(1.25); /* Slightly scale on hover */
+}
+
+.hero-button:focus,
+.donation-button:focus,
+.membership-button:focus,
+.email-button:focus {
+    outline: 2px solid var(--accent-color); /* Outline on focus */
 }
