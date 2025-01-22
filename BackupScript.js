@@ -355,7 +355,7 @@ representatives.forEach(representative => {
             alert("You don't have permission to delete this.");
           }
         });
-      } else {  
+      } else {
         alert("कृपया सर्व माहिती भरा!"); // Alert for incomplete form fields
       }
     });
