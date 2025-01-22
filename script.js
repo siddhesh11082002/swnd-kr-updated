@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const heroSection = document.querySelector('.hero-section');
 const imagePaths = [
     'images/banner/ban1.jpg',
-    'images/banner/ban2.jpg',
     'images/banner/ban3.jpg',
     'images/banner/ban4.jpg',
     'images/banner/ban5.jpg',
@@ -69,7 +68,7 @@ emailbutton.addEventListener('click', function (event) {
     console.log("email section");
 
     var recipients = "officeofmr@gov.in,av.odisha@sansad.nic.in,ashwini.vaishnav@gmail.com,cm@maharashtra.gov.in,dcm@maharashtra.gov.in,dycm@maharashtra.gov.in,bagadeharibhau@gmail.com,Chairmanmls5@gmail.com,ministerwssd@gmail.com,cs@maharashtra.gov.in,psec.wssd@maharashtra.gov.in,acs.transport@maharashtra.gov.in,divcom.konkan@maharashtra.gov.in,collector.sindhudurg@maharashtra.gov.in,dycommr.enf1@gmail.com,cbawankule.min@gmail.com,cmpro@maharashtra.gov.in,prakash.sabale@nic.in,rdc.sindhudurg@maharashtra.gov.in,dyceosin@yahoo.com,ceozp.sindhudurg@maharashtra.gov.in,ambadasdanve79@gmail.com,press.secy@rb.nic.in,us.ca4@gov.in,edpg@rb.railnet.gov.in";
-    var cc = "office.mosrs@gov.in,aneesh.hegde@gov.in,chiefminister@maharashtra.gov.in,CM@maharashtra.gov.in,dcm@maharashtra.gov.in,sunil.tatkare55@sansad.nic.in,sunilrane2013@gmail.com,narayan.rane@gov.in,narayan.rane@sansad.nic.in,narayanrane52@gmail.com,shripad.naik52@gov.in,shripad.naik@sansad.nic.in,shrinivaspoojari53@gmail.com,captain.brijesh@sansad.nic.in,aniket.tat@gmail.com,manishakayande@rediffmaill.com,neeilamgorhe@gmail.com,asmita.jagruti@gmail.com,uddhavthackeray@gmail.com,anildattatray@gmail.com,aamshyadada@gmail.com,vilaspotnis99@gmail.com,misunilshinde@gmail.com,BHAIGIRKAR16@gmail.com,niranjandavkhare@gmail.com,pydmlaoffice@gmail.com,kolimahasangh@yahoo.com,dnyaneshwar.mhatre68@gmail.com,kapilpatil@gmail.com,jayantpwp@gmail.com,Yogesh_kadam1986@outlook.com,mlamaheshchoughule@gmail.com,bjpofficemalad@yahoo.com,speakerrsn1@gmail.com,ravishethpatil158@gmail.com,officeofmlaatul@gmail.com,mandataimhatre@gmail.com,nnr23682@gmail.com,bharatilavekar@gmail.com,parag@maninfra.com,ashish.shelar@yahoo.com,yogesh_Sagar09@yahoo.in.com,ameetsatam@yahoo.com,captainr.tamilselvan@gmail.com,jsa707@gmail.com,aadtti7@yahoo.co.in,sbhusara41@gmail.com,nawabmalikmla@gmail.com,gaikwad.varsha3@gmail.com,aminpatel186@gmail.com,abuasimazmi@hotmail.com,raissp132@gmail.com,mla@rajupatilmns.com,geetajainoffice@gmail.com,secy1-mls@mah.gov.in,shekhargnikam@gmail.com,sandipanbhumare@gmail.com,sandipanbhumare.mp@sansad.nic.in,sc.barne@sansad.nic.in,appabarne@gmail.com,nageshpatil4545@gmail.com,udayanrajebhonsle@gmail.com,udayanraje.bhonsle@sansad.nic.in,shahuchhatrapatikop@gmail.com,shahu.chhatrapatikol@sansad.nic.in,anil.desai@sansad.nic.in,email@nitingadkari.org,nitin.gadkari@nic.in,piyush.goyal@gov.in,prataprao.jadhav@sansad.nic.in,jadhavprataprao25@gmail.com,prataprao.jadhav@gmail.com,nr.khadase@sansad.nic.in,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,amol.kolhe@sansad.nic.in,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@gmail.com,hemantsavara@yahoo.co.in,arvind.sawant@sansad.nic.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,smita.udaywagh@sansad.nic.in,waikarravindra@gmail.com,dranil.bonde@sansad.nic.in,priyanka.c19@sansad.nic.in,ashokchavan.009@sansad.nic.in,mpmilind.deora@sansad.nic.in,cdhandore.mp@sansad.nic.in,bhagwat.karad@sansad.nic.in,mp.medha@sansad.nic.in,dhananjaymahadik.mp@sansad.nic.in,praful@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in,ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,k.gautam@nic.in,general@krcl.co.in ";
+    var cc = "office.mosrs@gov.in,aneesh.hegde@gov.in,narayanrane52@gmail.com,shripad.naik52@gov.in,aniket.tat@gmail.com,manishakayande@rediffmaill.com,neeilamgorhe@gmail.com,asmita.jagruti@gmail.com,uddhavthackeray@gmail.com,anildattatray@gmail.com,aamshyadada@gmail.com,misunilshinde@gmail.com,BHAIGIRKAR16@gmail.com,niranjandavkhare@gmail.com,pydmlaoffice@gmail.com,kolimahasangh@yahoo.com,dnyaneshwar.mhatre68@gmail.com,jayantpwp@gmail.com,Yogesh_kadam1986@outlook.com,mlamaheshchoughule@gmail.com,bjpofficemalad@yahoo.com,speakerrsn1@gmail.com,ravishethpatil158@gmail.com,officeofmlaatul@gmail.com,mandataimhatre@gmail.com,nnr23682@gmail.com,bharatilavekar@gmail.com,parag@maninfra.com,ashish.shelar@yahoo.com,yogesh_Sagar09@yahoo.in.com,ameetsatam@yahoo.com,aadtti7@yahoo.co.in,sbhusara41@gmail.com,nawabmalikmla@gmail.com,gaikwad.varsha3@gmail.com,aminpatel186@gmail.com,abuasimazmi@hotmail.com,raissp132@gmail.com,mla@rajupatilmns.com,geetajainoffice@gmail.com,secy1-mls@mah.gov.in,shekhargnikam@gmail.com,sandipanbhumare@gmail.com,appabarne@gmail.com,nageshpatil4545@gmail.com,shahuchhatrapatikop@gmail.com,email@nitingadkari.org,nitin.gadkari@nic.in,jadhavprataprao25@gmail.com,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@gmail.com,hemantsavara@yahoo.co.in,arvind.sawant@sansad.nic.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,smita.udaywagh@sansad.nic.in,waikarravindra@gmail.com,dranil.bonde@sansad.nic.in,priyanka.c19@sansad.nic.in,ashokchavan.009@sansad.nic.in,mpmilind.deora@sansad.nic.in,cdhandore.mp@sansad.nic.in,bhagwat.karad@sansad.nic.in,mp.medha@sansad.nic.in,dhananjaymahadik.mp@sansad.nic.in,praful@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in,ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,k.gautam@nic.in,general@krcl.co.in";
     var bcc = "akhandkokanpravasiseva@gmail.com,swaditerminus@gmail.com";
     
     var subject = "सावंतवाडी टर्मिनसचे उद्घाटन आपल्या हस्ते व्हावे ही कोकणवासियांची भावना";
@@ -112,16 +111,25 @@ emailbutton.addEventListener('click', function (event) {
                     "&subject=" + encodeURIComponent(subject) +
                     "&body=" + encodeURIComponent(body);
 
-    // Create temporary anchor element
-    var tempLink = document.createElement('a');
-    tempLink.setAttribute('href', emailLink);
+    // Construct the mailto link
+    emailLink = `mailto:${encodeURIComponent(recipients)}?cc=${encodeURIComponent(cc)}&bcc=${encodeURIComponent(bcc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Debugging: Log the link
+    console.log("CC:", cc);
+    console.log("Generated email link:", emailLink);
 
-    // Append anchor element to body
+
+  // Create and click the temporary link
+  try {
+    const tempLink = document.createElement('a');
+    tempLink.href = emailLink;  
     document.body.appendChild(tempLink);
-
-    // Trigger the email client
     tempLink.click();
-
+    document.body.removeChild(tempLink);
+    console.log("Email client triggered");
+} catch (error) {
+    console.error("Failed to trigger email client:", error);
+}
     // Clean up
     document.body.removeChild(tempLink);
 });
@@ -254,120 +262,4 @@ representatives.forEach(representative => {
     
     representativeGrid.appendChild(card);
 });
-
-
-// voice section
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-    apiKey: "AIzaSyAz98QmhgFapE7PY7ShVW2fHQcPCvHVkX8",
-    authDomain: "swnd-terminus.firebaseapp.com",
-    projectId: "swnd-terminus",
-    storageBucket: "swnd-terminus.firebasestorage.app",
-    messagingSenderId: "530194613372",
-    appId: "1:530194613372:web:6527065b99481ac709f5f9",
-    measurementId: "G-784NW86FSV"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    
-
-    const form = document.getElementById("add-voice-form"); // Form element
-    const grid = document.getElementById("voice-grid"); // Voice grid container
-    const adminToggle = document.getElementById("admin-toggle"); // Admin toggle button
-    let isAdmin = false; // Tracks admin mode status
-  
-    // Predefined admin key
-    const ADMIN_KEY = "12345";
-  
-    // Toggle admin mode
-    adminToggle.addEventListener("click", () => {
-      if (!isAdmin) {
-        const key = prompt("Enter admin key:");
-        if (key === ADMIN_KEY) {
-          isAdmin = true;
-          adminToggle.textContent = "Admin Mode: ON";
-          adminToggle.classList.add("admin-active");
-          enableAdminFeatures();
-          alert("Admin mode enabled.");
-        } else {
-          alert("Invalid admin key.");
-        }
-      } else {
-        isAdmin = false;
-        adminToggle.textContent = "Admin Mode";
-        adminToggle.classList.remove("admin-active");
-        disableAdminFeatures();
-        alert("Admin mode disabled.");
-      }
-    });
-  
-    // Enable admin features (e.g., show delete buttons)
-    function enableAdminFeatures() {
-      const deleteButtons = document.querySelectorAll(".delete-btn");
-      deleteButtons.forEach((btn) => (btn.style.display = "block"));
-    }
-  
-    // Disable admin features (e.g., hide delete buttons)
-    function disableAdminFeatures() {
-      const deleteButtons = document.querySelectorAll(".delete-btn");
-      deleteButtons.forEach((btn) => (btn.style.display = "none"));
-    }
-  
-    // Handle form submission
-    form.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevent default form submission
-  
-      const message = document.getElementById("voice-message").value.trim(); // Message textarea
-      const author = document.getElementById("voice-author").value.trim(); // Author input
-  
-      if (message && author) {
-        // Create a new voice card
-        const card = document.createElement("div");
-        card.classList.add("voice-card");
-  
-        card.innerHTML = `
-          <p>${message}</p>
-          <h4>- ${author}</h4>
-          <button class="delete-btn" style="display: ${isAdmin ? 'block' : 'none'};">&times;</button>
-        `;
-  
-        // Append to the grid
-        grid.appendChild(card);
-  
-        // Reset form fields
-        form.reset();
-  
-        // Attach delete functionality to the new card
-        const deleteBtn = card.querySelector(".delete-btn");
-        deleteBtn.addEventListener("click", () => {
-          if (isAdmin) {
-            grid.removeChild(card);
-          } else {
-            alert("You don't have permission to delete this.");
-          }
-        });
-      } else {  
-        alert("कृपया सर्व माहिती भरा!"); // Alert for incomplete form fields
-      }
-    });
-  
-    // Attach delete functionality to existing cards
-    grid.addEventListener("click", (e) => {
-      if (e.target.classList.contains("delete-btn")) {
-        if (isAdmin) {
-          e.target.parentElement.remove();
-        } else {
-          alert("You don't have permission to delete this.");
-        }
-      }
-    });
 });
