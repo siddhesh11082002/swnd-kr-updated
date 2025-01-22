@@ -1,13 +1,13 @@
 :root {
-  --primary-bg: #f0f8ff;      /* Alice Blue for primary backgrounds */
-  --primary-text: #002147;    /* Oxford Blue for text */
-  --accent-color: #00509e;    /* Sapphire Blue for accents and buttons */
-  --secondary-bg: #e6f2ff;    /* Light Blue for subtle background areas */
-  --link-color: #4682b4;      /* Steel Blue for links and interactive elements */
-  --highlight-color: #87cefa; /* Light Sky Blue for subtle highlights */
-  --border-color: #b0c4de;    /* Light Steel Blue for borders and dividers */
-  --hover-bg: #003d73;        /* Darker Sapphire Blue for hover effects */
-  --hover-link: #1e90ff;      /* Dodger Blue for hover links */
+  --primary-bg: #F5F5F5;      /* Soft Grey for primary backgrounds */
+  --primary-text: #1A1A1A;    /* Charcoal for text */
+  --accent-color: #D97706;    /* Muted Amber for accents and buttons */
+  --secondary-bg: #EDEDED;    /* Light Grey for subtle background areas */
+  --link-color: #336699;      /* Muted Blue for links and interactive elements */
+  --highlight-color: #FFB74D; /* Soft Amber for subtle highlights */
+  --border-color: #D3D3D3;    /* Light Grey for borders and dividers */
+  --hover-bg: #B65A03;        /* Deep Amber for hover effects */
+  --hover-link: #1C5D99;      /* Muted Sapphire Blue for hover links */
 }
 
 /* Global Styles */
@@ -468,7 +468,6 @@ animation: background-animation 15s infinite;
 .membership-button:hover {
   background-color: var(--hover-bg); /* Darker red for hover effect */
 }
-
 /* Gallery Section Styles */
 .gallery-section {
   background-color: var(--secondary-bg); /* Light Gray background */
@@ -479,7 +478,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: var(--link-color); /* Muted Purple for heading */
+  color: var(--link-color); /* Muted Blue for heading */
 }
 
 .gallery-grid {
@@ -508,7 +507,7 @@ animation: background-animation 15s infinite;
 }
 
 .gallery-grid::-webkit-scrollbar-thumb:hover {
-  background-color: var(--hover-link); /* Darker purple on hover */
+  background-color: var(--hover-link); /* Muted Sapphire Blue on hover */
 }
 
 .gallery-grid img {
@@ -521,7 +520,7 @@ animation: background-animation 15s infinite;
 
 /* News Section Styles */
 .news-section {
-  background-color: var(--highlight-color); /* Soft Yellow background */
+  background-color: var(--highlight-color); /* Soft Amber background */
   padding: 60px 0;
 }
 
@@ -529,7 +528,7 @@ animation: background-animation 15s infinite;
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: var(--link-color); /* Muted Purple for heading */
+  color: var(--link-color); /* Muted Blue for heading */
 }
 
 .news-grid {
@@ -554,11 +553,11 @@ animation: background-animation 15s infinite;
 .news-grid::-webkit-scrollbar-thumb {
   background-color: var(--border-color); /* Light Gray for scrollbar thumb */
   border-radius: 10px;
-  border: 2px solid var(--highlight-color); /* Match section background */
+  border: 2px solid var(--secondary-bg); /* Match section background */
 }
 
 .news-grid::-webkit-scrollbar-thumb:hover {
-  background-color: var(--hover-link); /* Darker purple on hover */
+  background-color: var(--hover-link); /* Muted Sapphire Blue on hover */
 }
 
 /* Common Image Styles */
@@ -578,78 +577,119 @@ animation: background-animation 15s infinite;
   background-color: var(--secondary-bg); /* Light Gray for placeholders */
   text-align: center;
   line-height: 150px;
-  color: var(--primary-text); /* Dark Gray for placeholder text */
+  color: var(--primary-text); /* Charcoal for placeholder text */
 }
 
-/* Voice Section Styles */
+/* General Voice Section Styles */
 .voice-section {
-  background-color: white;
-  padding: 60px 0;
+  background-color: #f5f5f5; /* Soft background */
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
 }
 
 .voice-section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
   text-align: center;
-  color: #0d47a1;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #00509e;
 }
 
+/* Voice Grid Styles */
 .voice-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  margin-bottom: 30px;
 }
 
 .voice-card {
-  background-color: #f5f5f5;
+  background: #ffffff; /* White background for contrast */
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
 }
 
 .voice-card p {
-  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 1rem;
   line-height: 1.6;
-  color: #333;
-}
-/* Voice Section Styles */
-.voice-section {
-  background-color: var(--secondary-bg); /* White background */
-  padding: 60px 0;
-}
-
-.voice-section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-align: center;
-  color: var(--link-color); /* Muted Purple for heading */
-}
-
-.voice-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.voice-card {
-  background-color: var(--highlight-color); /* Soft Yellow for cards */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.voice-card p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333; /* Dark Gray for text */
 }
 
 .voice-card h4 {
-  font-size: 20px;
-  margin-top: 10px;
-  color: var(--link-color); /* Muted Purple for headings */
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Add Voice Form */
+.add-voice-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-voice-form textarea,
+.add-voice-form input,
+.add-voice-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-voice-form button {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-voice-form button:hover {
+  background-color: #003f7f;
+}
+
+.voice-card .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.admin-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.admin-btn.admin-active {
+  background-color: #28a745;
+}
+
+.admin-btn:hover {
+  background-color: #0056b3;
 }
 
 /* Contact Section Styles */
