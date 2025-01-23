@@ -62,21 +62,21 @@ donationButton.addEventListener('click', function (event) {
 
 
 const subjects = [
-    "सावंतवाडी टर्मिनसचे उद्घाटन आपल्या हस्ते व्हावे ही कोकणवासियांची भावना",
-    "कोकणवासीयांची विनंती: सावंतवाडी टर्मिनसचे उद्घाटन आपल्या हस्ते करा",
-    "आपल्या हस्ते सावंतवाडी टर्मिनसचे उद्घाटन होणे गरजेचे",
-    "सावंतवाडी टर्मिनस उद्घाटनाबाबत आपली उपस्थिती हवी",
-    "कोकणवासीयांचे स्वप्न पूर्ण करा: सावंतवाडी टर्मिनसचे उद्घाटन",
-    "सावंतवाडी टर्मिनसचे काम पूर्ण होऊन उद्घाटन आपल्या हस्ते व्हावे",
-    "कोकणवासीयांची इच्छा: सावंतवाडी टर्मिनसचे उद्घाटन आपल्या उपस्थितीत व्हावे",
-    "सावंतवाडी टर्मिनसच्या उद्घाटनासाठी कोकणवासीय आपली वाट पाहत आहेत",
-    "आपण केलेल्या शिलान्यासाचे फळ सावंतवाडी टर्मिनसचे उद्घाटन व्हावे",
-    "सावंतवाडी टर्मिनस: कोकणवासीयांसाठी एक ऐतिहासिक क्षण",
-    "टर्मिनसचे उद्घाटन आपल्या हस्ते होणे कोकणवासीयांसाठी अभिमानाचा क्षण",
-    "कोकणवासीयांना दिलेला शब्द पूर्ण करा: सावंतवाडी टर्मिनस",
-    "सावंतवाडी टर्मिनसचे उद्घाटन आणि कोकणवासीयांचा आनंद",
-    "आपल्या हस्ते सावंतवाडी टर्मिनसचे उद्घाटन करून इतिहास रचा",
-    "सावंतवाडी टर्मिनसच्या उद्घाटनासाठी आपल्या मार्गदर्शनाची गरज",
+    "The people of Konkan sincerely hope that you will inaugurate the Sawantwadi terminus.",
+    "A humble request from the people of Konkan: Kindly inaugurate the Sawantwadi terminus.",
+    "It is imperative that you inaugurate the Sawantwadi terminus.",
+    "Your presence is required for the inauguration of the Sawantwadi terminus.",
+    "Fulfill the dreams of the Konkan people: Inaugurate the Sawantwadi terminus.",
+    "The construction of the Sawantwadi terminus is complete and we request that you inaugurate it.",
+    "The people of Konkan wish for you to inaugurate the Sawantwadi terminus.",
+    "The people of Konkan are eagerly awaiting your presence for the inauguration of the Sawantwadi terminus.",
+    "Let the fruits of the foundation stone laid by you be realized with the inauguration of the Sawantwadi terminus.",
+    "The inauguration of the Sawantwadi terminus will be a historic moment for the people of Konkan.",
+    "The inauguration of the terminus by your hands will be a moment of pride for the people of Konkan.",
+    "Keep your promise to the people of Konkan: Inaugurate the Sawantwadi terminus.",
+    "The inauguration of the Sawantwadi terminus will bring immense joy to the people of Konkan.",
+    "Create history by inaugurating the Sawantwadi terminus.",
+    "Your guidance is needed for the successful inauguration of the Sawantwadi terminus.",
 ];
 
   // Email Button
