@@ -60,91 +60,67 @@ donationButton.addEventListener('click', function (event) {
     window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
 });
 
-
 const subjects = [
-    "The people of Konkan sincerely hope that you will inaugurate the Sawantwadi terminus.",
-    "A humble request from the people of Konkan: Kindly inaugurate the Sawantwadi terminus.",
-    "It is imperative that you inaugurate the Sawantwadi terminus.",
-    "Your presence is required for the inauguration of the Sawantwadi terminus.",
-    "Fulfill the dreams of the Konkan people: Inaugurate the Sawantwadi terminus.",
-    "The construction of the Sawantwadi terminus is complete and we request that you inaugurate it.",
-    "The people of Konkan wish for you to inaugurate the Sawantwadi terminus.",
-    "The people of Konkan are eagerly awaiting your presence for the inauguration of the Sawantwadi terminus.",
-    "Let the fruits of the foundation stone laid by you be realized with the inauguration of the Sawantwadi terminus.",
-    "The inauguration of the Sawantwadi terminus will be a historic moment for the people of Konkan.",
-    "The inauguration of the terminus by your hands will be a moment of pride for the people of Konkan.",
-    "Keep your promise to the people of Konkan: Inaugurate the Sawantwadi terminus.",
-    "The inauguration of the Sawantwadi terminus will bring immense joy to the people of Konkan.",
-    "Create history by inaugurating the Sawantwadi terminus.",
-    "Your guidance is needed for the successful inauguration of the Sawantwadi terminus.",
-];
+    "कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण करण्यास अधिवेशनात तारांकित प्रश्न उपस्थित करणे बाबत.",
+    "सावंतवाडी टर्मिनस संदर्भात राज्य शासनाची भूमिका.",
+    "सावंतवाडी टर्मिनस संदर्भात तारांकित प्रश्न उपस्थित करणे बाबत.",
+    "कोकण रेल्वे संदर्भात अधिवेशनात आवाज उठवणे बाबत.",
+    "कोकण रेल्वेच्या विलीनीकरणावर महाराष्ट्र शासनाची अधिकृत भूमिका स्पष्ट करावी.",
+    "कोकण रेल्वे विलीनीकरणासंदर्भात राज्य शासनाने केंद्र सरकारला दिलेले पत्र आणि उत्तराची माहिती द्यावी.",
+    "कोकण रेल्वेच्या पायाभूत सुविधा विकासासाठी महाराष्ट्र सरकारने कोणती तरतूद केली आहे?",
+    "सावंतवाडी रेल्वे टर्मिनसच्या नामकरण व विकासासाठी राज्य शासनाने कोणती पावले उचलली आहेत?",
+    "कोकण रेल्वेच्या वीर ते मडुरे दुहेरीकरणासाठी राज्य सरकारने निधी उपलब्ध करून दिला आहे का?",
+    "कोकण रेल्वेच्या विलीनीकरणाआधी महाराष्ट्र शासनाने आपले समभाग केंद्र सरकारकडे सुपूर्द करावेत का?",
+    "कोकण रेल्वेच्या विलीनीकरणासंदर्भात राज्याची भूमिका काय आहे?",
+    "कोकण रेल्वे महामंडळाच्या स्वायत्ततेमुळे कोकणला होणाऱ्या वित्तीय नुकसानीबाबत चर्चा आवश्यक आहे.",
+    "अमृत भारत स्थानक योजनेंतर्गत कोकण रेल्वे स्थानकांचा समावेश का नाही?",
+    "कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण लवकरात लवकर करण्यासंदर्भात अधिवेशनात चर्चा करावी."
+  ];
+  
+  
 
   // Email Button
-const emailbutton = document.querySelector('.email-button');
-emailbutton.addEventListener('click', function (event) {
+  const emailbutton = document.querySelector('.email-button');
+  emailbutton.addEventListener('click', function (event) {
+  
+      console.log("email section");
+  
+      //var recipients = "officeofmr@gov.in,cm@maharashtra.gov.in,dcm@maharashtra.gov.in,dycm@maharashtra.gov.in,bagadeharibhau@gmail.com,Chairmanmls5@gmail.com,ministerwssd@gmail.com,cs@maharashtra.gov.in,psec.wssd@maharashtra.gov.in,acs.transport@maharashtra.gov.in,divcom.konkan@maharashtra.gov.in,collector.sindhudurg@maharashtra.gov.in,dycommr.enf1@gmail.com,cbawankule.min@gmail.com,cmpro@maharashtra.gov.in,prakash.sabale@nic.in,rdc.sindhudurg@maharashtra.gov.in,dyceosin@yahoo.com,ceozp.sindhudurg@maharashtra.gov.in,ambadasdanve79@gmail.com,press.secy@rb.nic.in,us.ca4@gov.in,edpg@rb.railnet.gov.in";
+      var recipients = "ncpconnect.mumbai@gmail.com" ;
+      //var cc = "office.mosrs@gov.in,aneesh.hegde@gov.in,narayanrane52@gmail.com,shripad.naik52@gov.in,aniket.tat@gmail.com,manishakayande@rediffmaill.com,neeilamgorhe@gmail.com,asmita.jagruti@gmail.com,uddhavthackeray@gmail.com,anildattatray@gmail.com,aamshyadada@gmail.com,misunilshinde@gmail.com,BHAIGIRKAR16@gmail.com,niranjandavkhare@gmail.com,pydmlaoffice@gmail.com,kolimahasangh@yahoo.com,dnyaneshwar.mhatre68@gmail.com,jayantpwp@gmail.com,Yogesh_kadam1986@outlook.com,mlamaheshchoughule@gmail.com,bjpofficemalad@yahoo.com,speakerrsn1@gmail.com,ravishethpatil158@gmail.com,officeofmlaatul@gmail.com,mandataimhatre@gmail.com,nnr23682@gmail.com,bharatilavekar@gmail.com,parag@maninfra.com,ashish.shelar@yahoo.com,ameetsatam@yahoo.com,sbhusara41@gmail.com,nawabmalikmla@gmail.com,gaikwad.varsha3@gmail.com,aminpatel186@gmail.com,abuasimazmi@hotmail.com,raissp132@gmail.com,mla@rajupatilmns.com,geetajainoffice@gmail.com,secy1-mls@mah.gov.in,shekhargnikam@gmail.com,sandipanbhumare@gmail.com,appabarne@gmail.com,nageshpatil4545@gmail.com,shahuchhatrapatikop@gmail.com,email@nitingadkari.org,nitin.gadkari@nic.in,jadhavprataprao25@gmail.com,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@gmail.com,hemantsavara@yahoo.co.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,waikarravindra@gmail.com,mpmilind.deora@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in,ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,k.gautam@nic.in,general@krcl.co.in,ibnlokmatsport@gmail.com ,mymahanagarweb@gmail.com,middaysocial@gmail.com , pratikriya@expressindia.com ,admin@freepressjournal.in ";
+      var cc = " jayantrp@gmail.com,rohit.pawar@indialeader.com,rrp@rohitpawar.org,jitendra.awhad@yahoo.com";
+      var bcc = "akhandkokanpravasiseva@gmail.com,swaditerminus@gmail.com";
+      
+      const randomIndex = Math.floor(Math.random() * subjects.length);
+      const subject = subjects[randomIndex];
+      
+      var body = `आदरणीय महोदय,
 
-    console.log("email section");
+आपल्या सोशल मीडिया प्लॅटफॉर्म मार्फत मिळालेल्या माहितीनुसार, आम्ही कोकणवासी आमच्या रेल्वे संदर्भातील समस्या आपल्यापर्यंत पोचवत आहोत. आपण या अधिवेशनात यावर सरकारचे लक्ष वेधावे ही विनंती.
 
-    var recipients = "officeofmr@gov.in,cm@maharashtra.gov.in,dcm@maharashtra.gov.in,dycm@maharashtra.gov.in,bagadeharibhau@gmail.com,Chairmanmls5@gmail.com,ministerwssd@gmail.com,cs@maharashtra.gov.in,psec.wssd@maharashtra.gov.in,acs.transport@maharashtra.gov.in,divcom.konkan@maharashtra.gov.in,collector.sindhudurg@maharashtra.gov.in,dycommr.enf1@gmail.com,cbawankule.min@gmail.com,cmpro@maharashtra.gov.in,prakash.sabale@nic.in,rdc.sindhudurg@maharashtra.gov.in,dyceosin@yahoo.com,ceozp.sindhudurg@maharashtra.gov.in,ambadasdanve79@gmail.com,press.secy@rb.nic.in,us.ca4@gov.in,edpg@rb.railnet.gov.in";
-    var cc = "narayanrane52@gmail.com,bjpofficemalad@yahoo.com,speakerrsn1@gmail.com,ravishethpatil158@gmail.com,officeofmlaatul@gmail.com,mandataimhatre@gmail.com,nnr23682@gmail.com,bharatilavekar@gmail.com,parag@maninfra.com,ashish.shelar@yahoo.com,ameetsatam@yahoo.com,sbhusara41@gmail.com,nawabmalikmla@gmail.com,gaikwad.varsha3@gmail.com,aminpatel186@gmail.com,abuasimazmi@hotmail.com,raissp132@gmail.com,mla@rajupatilmns.com,geetajainoffice@gmail.com,secy1-mls@mah.gov.in,shekhargnikam@gmail.com,sandipanbhumare@gmail.com,appabarne@gmail.com,nageshpatil4545@gmail.com,shahuchhatrapatikop@gmail.com,email@nitingadkari.org,nitin.gadkari@nic.in,jadhavprataprao25@gmail.com,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@gmail.com,hemantsavara@yahoo.co.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,waikarravindra@gmail.com,mpmilind.deora@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in,ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,k.gautam@nic.in,general@krcl.co.in,ibnlokmatsport@gmail.com ,mymahanagarweb@gmail.com,middaysocial@gmail.com , pratikriya@expressindia.com ,admin@freepressjournal.in ";    var bcc = "akhandkokanpravasiseva@gmail.com,swaditerminus@gmail.com";
-    
-    const randomIndex = Math.floor(Math.random() * subjects.length);
-    const subject = subjects[randomIndex];
-    
-    var body = `To,
-
-Hon. Shri Devendra Fadanavis ji,
-Chief Minister of Maharashtra
-Mumbai,
-
-Subject: Requesting you to take prompt responses along with immediate action on the approved work of the Sawantwadi Railway Terminus (SWV), requirement of additional train halts and passengers Amenities.
-
-Respected Sir,
-
-
-I would like to seek your attention on the following recent proposals and multiple requests:
-
-1.Prolonged pending development work at the Sawantwadi railway terminus should be completed as soon as possible. Including Rel-O-Tel, Terminus Building,Platforms, Watering Arrangements etc.
-
-2.Konkan Railway corporation needs to be merged into Indian Railways for better future aspects.
-Intigrate Ratnagiri Region (Kolad to Madura) with Central Railway, And Karwar Region with South Western Railway. 
-
-3.Inclusion of Sawantwadi station in the Amrit Bharat Station Scheme. 
-KRCL has already sent its proposal to the Executive Director (SD and Trans) Railway Board, Dated 30/12/2022.
-
-3.Halts of the express trains mentioned below were revoked from Sawantwadi Rd station due to ZBTT during the covid period should be reinstated on high priority.
-
-1. 12431/32 H. Nizamuddin - Trivendrum Rajdhani express.
-2. 12201/02 LTT Mumbai - Kochuvelli Garib Rath Express.
-
-KRCL has already sent its proposal regarding Feasibility of said halts with their remarks to the Principal Executive Director (Coaching) Railway Board, Dated 07/08/2024.
+महाराष्ट्र शासनाने पुढील प्रश्नांची उत्तरे देणे आवश्यक आहे, ते आपण सभागृहात विचारावेत, ही नम्र विनंती:
+१. कोकण रेल्वेच्या विलीनीकरणाबाबत राज्य शासनाला कोणते पत्र प्राप्त झाले आहे का? असल्यास, त्याला काय उत्तर दिले?
+२. कोकण रेल्वे विलीनीकरणाबाबत महाराष्ट्राची भूमिका काय?
+३. विलीनीकरणाला विरोध असल्यास महाराष्ट्राने कोकण रेल्वेच्या वीर ते मडुरे दुहेरीकरणासाठी, परिपूर्ण सावंतवाडी टर्मिनससाठी व पायाभूत सुविधा विकासासाठी किमान १० हजार कोटींचा निधी देण्याची शासनाची तयारी आहे का?
+४. विलीनीकरणासाठी इतर राज्ये तयार नसल्यास महाराष्ट्राने आपले समभाग केंद्राच्या स्वाधीन करून रोहा ते मडूरे मार्ग केंद्रीय रेल्वे मंत्रालयाला हस्तांतरित करावा.
+५. सावंतवाडी रेल्वे टर्मिनसच्या नामकरण तथा विकासासाठी राज्यसरकार तर्फे काय तरतूद करण्यात आली आहे ?
 
 
-4.Please consider the high Passengers footfall and Earnings at Sawantwadi station and kindly provide halts to below trains at Sawantwadi Rd station.
+तांत्रिक मुद्दे विशद करणारी 
 
-i) 12133/34 C.S.M.T. Mumbai - Manglore Junction - C.S.M.T. Mumbai Express.
+मुंबई आणि मंगळुरु ही दोन बंदरे जोडण्याच्या दृष्टीने रोहा ते मंगळुरु दरम्यान नवीन ब्रॉडगेज मार्ग बांधण्यासाठी केंद्रीय रेल्वे मंत्रालय, महाराष्ट्र, गोवा, कर्नाटक आणि केरळ राज्य शासनांच्या संयुक्त विद्यमाने कोकण रेल्वे महामंडळाची स्थापना १९९० मध्ये करण्यात आली. १५ वर्षांनंतर किंवा सर्व देणी देऊन झाल्यावर यांपैकी जे आधी होईल तेव्हा हे महामंडळ भारतीय रेल्वेत विलीन होणे अपेक्षित होते. त्यानुसार वर्ष २००८-०९ मध्ये विलीनीकरण होण्याची शक्यता असताना केंद्र शासनाने सर्व देणी देऊन झाल्यावरही हे महामंडळ स्वतंत्रच राहील असे प्रथम आर्थिक पुनर्रचना प्रस्तावात ठरवले.
 
-ii) 22229/30 C.S.M.T. Mumbai - Madgaon - C.S.M.T. Mumbai Vande Bharat Express.
+आदरणीय पंतप्रधान श्री. नरेंद्र मोदी यांच्या नेतृत्वाखाली २०१४ पासून भारतीय रेल्वेत आधुनिकीकरण व क्रांती सुरु असताना कोकण मात्र त्यापासून वंचित आहे. त्यामुळे आदरणीय पंतप्रधानांच्या प्रतिमेला धक्का बसतो. कोकण रेल्वे भारतीय रेल्वेचा भाग नसून स्वतंत्र महामंडळ असल्यामुळे हे घडते. केंद्रीय अर्थसंकल्पातून कोकण रेल्वेला निधी मिळत नाही. त्यांना पायाभूत सुविधांच्या सुधारणेसाठी लागणाऱ्या निधीकरिता राज्य शासनाकडून मिळालेला निधी व बाहेरील कर्जांवर अवलंबून राहावे लागते.
 
-iii) 22655/56 Ernakulam Junction - H. Nizamuddin - Ernakulam Junction Superfast Express. (Weekly).
+संपूर्ण देशात केंद्रीय रेल्वे मंत्रालयाच्या अर्थसंकल्पातून रेल्वे विकास प्रकल्प सुरु असताना केवळ स्वतंत्र महामंडळ असल्यामुळे कोकणाला त्याचा लाभ न देणे अन्यायकारक आहे. ६ ऑगस्ट, २०२३ ला आदरणीय पंतप्रधान श्री. नरेंद्र मोदी यांनी उदघाटन केलेल्या अमृत भारत स्थानक योजनेत कोकण रेल्वेच्या रत्नागिरी विभागातील (म्हणजेच महाराष्ट्रातील) एकाही स्थानकाचा समावेश नाही.
 
-iv) 22653/54 Trivandrum Central - H. Nizamuddin - Trivandrum Central Superfast Express. (Weekly).
+कोकण रेल्वे महामंडळाचे भारतीय रेल्वेत विलीनीकरण करण्याआधी ही कंपनी १००% मालकी हक्कांसहित केंद्र शासनाच्या अखत्यारित येणे आवश्यक आहे. त्यासाठी संबंधित राज्य शासनांनी त्यांचे समभाग केंद्रीय रेल्वे मंत्रालयाच्या स्वाधीन केले पाहिजेत असे खासदार श्री. कोटा श्रीनिवास पुजारी व खासदार श्री. धैर्यशील पाटील यांनी संसदेत विचारलेल्या प्रशांत उत्तर देताना केंद्रीय रेल्वे मंत्री श्री. अश्विनी वैष्णव यांनी सांगितले.
 
+म्हणून, कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण करण्याच्या प्रस्तावाला महाराष्ट्राच्या वतीने मान्यता मिळणे आवश्यक आहे. त्यासाठी गरज पडल्यास महाराष्ट्राच्या ताब्यात आता असलेले ३९६.५४२५ कोटी रुपयांचे समभाग कोणत्याही मोबदल्याची अपेक्षा न ठेवता केंद्रीय रेल्वे मंत्रालयाला सुपूर्द करावेत. ते केल्यानंतर कोकण रेल्वे केंद्र शासनाच्या ताब्यातील सार्वजनिक क्षेत्रातील उपक्रम न राहता ताबडतोब भारतीय रेल्वेत विलीन केले जाईल याबाबत केंद्रीय रेल्वे मंत्रालयाकडून लेखी हमी घ्यावी.
 
-5.Introduction of the new daily train From Pune Junction  - Kalyan (Mumbai) -  Sawantwadi (SWV), on regular basis.
-
-6.Expendite the Work of New BG Line between Sawantwadi - Chandgarh - Belgaum.(114.6KM)
-(Preliminary Engineering Cum Traffic Survay Report has been submitted to the Railway Board by SWR at Dated 21/09/2018.)
-
-Please note we attempted multiple times with the KRCL via various contact mediums requesting to fulfill the studyful and basic demands to be accepted but unfortunately we didn't get proper response or we would rather say concrete action plan was not made to achieve the same.
-
-Scheduling a meeting at your office along with Konkan railway passenger Asssociation Sawantwadi would bring more light to resolve these problems.
-
-Looking forward to hearing more on this matter as soon as possible.
-
-Thank you!
-
-Your Sincerely,`;
+तरी, आपण याबाबतीत येत्या अधिवेशनात आवाज उठवावा ही नम्र विनंती.`;
+  
+  
 
 
     var emailLink = "mailto:" + encodeURIComponent(recipients) +
