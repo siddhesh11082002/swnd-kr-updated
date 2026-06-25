@@ -57,71 +57,45 @@ setInterval(changeBackgroundImage, 4000);
 const donationButton = document.querySelector('.donation-button');
 donationButton.addEventListener('click', function (event) {
     event.preventDefault();
-    window.open('https://docs.google.com/forms/d/e1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfmQHHjx6Icw0Qja1aa4zBmD9UIYDTmEm9H0cYzBz6VFkFnRA/viewform?usp=sf_link', '_blank'); 
 });
-
 const subjects = [
-    "कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण करण्यास अधिवेशनात तारांकित प्रश्न उपस्थित करणे बाबत.",
-    "सावंतवाडी टर्मिनस संदर्भात राज्य शासनाची भूमिका.",
-    "सावंतवाडी टर्मिनस संदर्भात तारांकित प्रश्न उपस्थित करणे बाबत.",
-    "कोकण रेल्वे संदर्भात अधिवेशनात आवाज उठवणे बाबत.",
-    "कोकण रेल्वेच्या विलीनीकरणावर महाराष्ट्र शासनाची अधिकृत भूमिका स्पष्ट करावी.",
-    "कोकण रेल्वे विलीनीकरणासंदर्भात राज्य शासनाने केंद्र सरकारला दिलेले पत्र आणि उत्तराची माहिती द्यावी.",
-    "कोकण रेल्वेच्या पायाभूत सुविधा विकासासाठी महाराष्ट्र सरकारने कोणती तरतूद केली आहे?",
-    "सावंतवाडी रेल्वे टर्मिनसच्या नामकरण व विकासासाठी राज्य शासनाने कोणती पावले उचलली आहेत?",
-    "कोकण रेल्वेच्या वीर ते मडुरे दुहेरीकरणासाठी राज्य सरकारने निधी उपलब्ध करून दिला आहे का?",
-    "कोकण रेल्वेच्या विलीनीकरणाआधी महाराष्ट्र शासनाने आपले समभाग केंद्र सरकारकडे सुपूर्द करावेत का?",
-    "कोकण रेल्वेच्या विलीनीकरणासंदर्भात राज्याची भूमिका काय आहे?",
-    "कोकण रेल्वे महामंडळाच्या स्वायत्ततेमुळे कोकणला होणाऱ्या वित्तीय नुकसानीबाबत चर्चा आवश्यक आहे.",
-    "अमृत भारत स्थानक योजनेंतर्गत कोकण रेल्वे स्थानकांचा समावेश का नाही?",
-    "कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण लवकरात लवकर करण्यासंदर्भात अधिवेशनात चर्चा करावी."
-  ];
-  
-  
+    "सावंतवाडी रेल्वे टर्मिनस (प्रस्तावित लोकमान्य मधु दंडवते रेल्वे टर्मिनस) चे प्रलंबित काम व नवीन कोचिंग केअर कॉम्प्लेक्स मंजूर करणे बाबत.",
+    "सावंतवाडी रेल्वे टर्मिनसचा अमृत भारत स्थानक योजनेत समावेश करणे बाबत.",
+    "सावंतवाडी टर्मिनस प्रकल्पाची सद्यस्थिती व आंतरविभागीय समन्वयाअभावी प्रकल्पाला येत असलेला विलंब बाबत.",
+    "सावंतवाडी टर्मिनसला 'लोकमान्य मधु दंडवते टर्मिनस' नाव देण्याच्या राज्य शासनाच्या निर्णयाची अंमलबजावणी करणे बाबत.",
+    "सावंतवाडी टर्मिनसच्या दुसऱ्या टप्प्याची पूर्तता व अतिरिक्त रेल्वे रुळ, फलाट, ROB मंजूर करणे बाबत.",
+    "सावंतवाडी स्थानकावर लांब पल्ल्याच्या गाड्यांना थांबा देण्याबाबत (मंगळुरू, मडगाव, गोवा, एर्नाकुलम, तिरुवनंतपुरम एक्सप्रेस).",
+    "मुंबई-सावंतवाडी, वसई-सावंतवाडी, पुणे-कल्याण-सावंतवाडी, नांदेड-सावंतवाडी, मनमाड-सावंतवाडी या नवीन गाड्यांचे नियोजन करणे बाबत.",
+    "सावंतवाडी टर्मिनस प्रकल्पाला राज्याचा 'एकात्मिक पायाभूत सुविधा प्रकल्प' दर्जा व MITRA योजनेत समावेश करणे बाबत.",
+    "सावंतवाडी स्थानकावर MTDC व KRCL यांच्यातील रेल हॉटेल (बजेट हॉटेल) प्रकल्पासाठी सामंजस्य करार पूर्ण करणे बाबत.",
+    "सावंतवाडी टर्मिनस प्रकल्पासाठी तिलारी आंतरराज्य धरणातून ५.४६ कोटींची पाणीपुरवठा योजना व चांदा ते बांदा, सिंधुरत्न समृद्धी योजनेतील ७.२० कोटींच्या सुविधांची अंमलबजावणी करणे बाबत.",
+    "सावंतवाडी टर्मिनस प्रकल्पाला केंद्राच्या 'गती शक्ती' (PMGS-NMP) योजनेत समावेश करणे बाबत.",
+    "सावंतवाडी टर्मिनसच्या भूमिपूजनाला ११ वर्षे पूर्ण झाल्यानिमित्त प्रकल्पाला गती देण्यासाठी कालबद्ध कृती आराखडा तयार करणे बाबत.",
+    "गणेशोत्सवाच्या पार्श्वभूमीवर सावंतवाडी टर्मिनसला गती देऊन प्रवाशांची गैरसोय टाळण्यासाठी उपाययोजना करणे बाबत.",
+    "सावंतवाडी रेल्वे टर्मिनसच्या विकासासाठी केंद्र व राज्य शासनाच्या विभागांनी परस्पर समन्वयाने कार्यवाही करणे बाबत."
+];
 
-  // Email Button
-  const emailbutton = document.querySelector('.email-button');
-  emailbutton.addEventListener('click', function (event) {
-  
-      console.log("email section");
-  
-      //var recipients = "officeofmr@gov.in,cm@maharashtra.gov.in,dcm@maharashtra.gov.in,dycm@maharashtra.gov.in,bagadeharibhau@gmail.com,Chairmanmls5@gmail.com,ministerwssd@gmail.com,cs@maharashtra.gov.in,psec.wssd@maharashtra.gov.in,acs.transport@maharashtra.gov.in,divcom.konkan@maharashtra.gov.in,collector.sindhudurg@maharashtra.gov.in,dycommr.enf1@gmail.com,cbawankule.min@gmail.com,cmpro@maharashtra.gov.in,prakash.sabale@nic.in,rdc.sindhudurg@maharashtra.gov.in,dyceosin@yahoo.com,ceozp.sindhudurg@maharashtra.gov.in,ambadasdanve79@gmail.com,press.secy@rb.nic.in,us.ca4@gov.in,edpg@rb.railnet.gov.in";
-      var recipients = "ncpconnect.mumbai@gmail.com" ;
-      //var cc = "office.mosrs@gov.in,aneesh.hegde@gov.in,narayanrane52@gmail.com,shripad.naik52@gov.in,aniket.tat@gmail.com,manishakayande@rediffmaill.com,neeilamgorhe@gmail.com,asmita.jagruti@gmail.com,uddhavthackeray@gmail.com,anildattatray@gmail.com,aamshyadada@gmail.com,misunilshinde@gmail.com,BHAIGIRKAR16@gmail.com,niranjandavkhare@gmail.com,pydmlaoffice@gmail.com,kolimahasangh@yahoo.com,dnyaneshwar.mhatre68@gmail.com,jayantpwp@gmail.com,Yogesh_kadam1986@outlook.com,mlamaheshchoughule@gmail.com,bjpofficemalad@yahoo.com,speakerrsn1@gmail.com,ravishethpatil158@gmail.com,officeofmlaatul@gmail.com,mandataimhatre@gmail.com,nnr23682@gmail.com,bharatilavekar@gmail.com,parag@maninfra.com,ashish.shelar@yahoo.com,ameetsatam@yahoo.com,sbhusara41@gmail.com,nawabmalikmla@gmail.com,gaikwad.varsha3@gmail.com,aminpatel186@gmail.com,abuasimazmi@hotmail.com,raissp132@gmail.com,mla@rajupatilmns.com,geetajainoffice@gmail.com,secy1-mls@mah.gov.in,shekhargnikam@gmail.com,sandipanbhumare@gmail.com,appabarne@gmail.com,nageshpatil4545@gmail.com,shahuchhatrapatikop@gmail.com,email@nitingadkari.org,nitin.gadkari@nic.in,jadhavprataprao25@gmail.com,rakshataikhadse@gmail.com,dramolkolhe80@gmail.com,dhairyasheelmane@gmail.com,sureshmhatre1701@gmail.com,murlidhar.mohol@gmail.com,sanjaydinapatil@gmail.com,hemantsavara@yahoo.co.in,officeofdrshrikantshinde.delhi@gmail.com,supriyassule@gmail.com,waikarravindra@gmail.com,mpmilind.deora@sansad.nic.in,dhairyashil.mprs@sansad.nic.in,pawars@sansad.nic.in,s.raut@sansad.nic.in,ambadasdanve79@gmail.com,anilkadam7711@gmail.com,vnaik95@gmail.com,press.secy@rb.nic.in,shivsenabhavan@gmail.com,Bjpmaha@gmail.com,vinodtawde@rediffmail.com,vinodstawde@gmail.com,spprabhu1@gmail.com,secretary@sureshprabhu.com,infokokanclub@gmail.com,k.gautam@nic.in,general@krcl.co.in,ibnlokmatsport@gmail.com ,mymahanagarweb@gmail.com,middaysocial@gmail.com , pratikriya@expressindia.com ,admin@freepressjournal.in ";
-      var cc = " jayantrp@gmail.com,rrp@rohitpawar.org";
-      var bcc = "akhandkokanpravasiseva@gmail.com,swaditerminus@gmail.com";
-      
-      const randomIndex = Math.floor(Math.random() * subjects.length);
-      const subject = subjects[randomIndex];
-      
-      var body = `आदरणीय महोदय,
+// Email Button
+const emailbutton = document.querySelector('.email-button');
+emailbutton.addEventListener('click', function (event) {
 
-आपल्या सोशल मीडिया प्लॅटफॉर्म मार्फत मिळालेल्या माहितीनुसार, आम्ही कोकणवासी आमच्या रेल्वे संदर्भातील समस्या आपल्यापर्यंत पोचवत आहोत. आपण या अधिवेशनात यावर सरकारचे लक्ष वेधावे ही विनंती.
+    console.log("email section");
 
-महाराष्ट्र शासनाने पुढील प्रश्नांची उत्तरे देणे आवश्यक आहे, ते आपण सभागृहात विचारावेत, ही नम्र विनंती:
-१. कोकण रेल्वेच्या विलीनीकरणाबाबत राज्य शासनाला कोणते पत्र प्राप्त झाले आहे का? असल्यास, त्याला काय उत्तर दिले?
-२. कोकण रेल्वे विलीनीकरणाबाबत महाराष्ट्राची भूमिका काय?
-३. विलीनीकरणाला विरोध असल्यास महाराष्ट्राने कोकण रेल्वेच्या वीर ते मडुरे दुहेरीकरणासाठी, परिपूर्ण सावंतवाडी टर्मिनससाठी व पायाभूत सुविधा विकासासाठी किमान १० हजार कोटींचा निधी देण्याची शासनाची तयारी आहे का?
-४. विलीनीकरणासाठी इतर राज्ये तयार नसल्यास महाराष्ट्राने आपले समभाग केंद्राच्या स्वाधीन करून रोहा ते मडूरे मार्ग केंद्रीय रेल्वे मंत्रालयाला हस्तांतरित करावा.
-५. सावंतवाडी रेल्वे टर्मिनसच्या नामकरण तथा विकासासाठी राज्यसरकार तर्फे काय तरतूद करण्यात आली आहे ?
+    var recipients = "Shri. Eknath Sambhaji Shinde (Chief Minister) <Cm@maharashtra.gov.in>, cmoffice-mh@nic.in, dcm@maharashtra.gov.in, dycm@maharashtra.gov.in, mr@rb.railnet.gov.in, \"crb@rb.railnet.gov.in\" <crb@rb.railnet.gov.in>, narayanrane52@gmail.com, narayan.rane@mpls.sansad.in, nareshmhaske.mp@sansad.nic.in, waikarravindra@gmail.com, cs@maharashtra.gov.in, sec.cm@maharashtra.gov.in, acs.transport@maharashtra.gov.in, divcom.konkan@maharashtra.gov.in, piyush.goyal@gov.in, sunil.tatkare7@gmail.com, sd.patil@mpls.sansad.in, Varsha Gaikwad <gaikwad.varsha3@gmail.com>, shrikant.shinde@sansad.nic.in, ceo-mitra@mah.gov.in, Sagar.kadu@gov.in, officeofmr@gov.in, mosr@rb.railnet.gov.in, office.mosrs@gov.in, secy.rb-mh@nic.in, mi@rb.railnet.gov.in, \"MD@maharashtratourism.gov.in\" <MD@maharashtratourism.gov.in>, anil.desai@sansad.nic.in, niranjanvdavkhare@gmail.com, Pramod Jathar <psjathar03@gmail.com>, ashish.shelar@yahoo.com, kesarkardeepak@gmail.com, nnr23682@gmail.com, Cmd@krcl.co.in, cpro@krcl.co.in, collector.sindhudurg@maharashtra.gov.in, Sulbhagaikwad142@gmail.com, \"MP Palghar Dr. Hemant Savara\" <hemantsavara5@gmail.com>, Sneha Dube Pandit <Snehadubepandit.jansampark@gmail.com>, \"sanjaypotnis1@gmail.com\" <sanjaypotnis1@gmail.com>, \"anild0205@gmail.com\" <anild0205@gmail.com>, amdarmaheshsawant@gmail.com, anantbnaroffice@gmail.com, mlarajannaik@gmail.com, ravindrachavan.mla@gmail.com, kumar ailani <mlakumarailani141@gmail.com>, sureshmhatre1701@gmail.com, mp.medha@sansad.nic.in, Medhakulkarnibjp@gmail.com, shrikantshinde87@yahoo.in, Supriya Sule <supriyassule@gmail.com>, spofficemail@yahoo.com, \"advanilparab.office@gmail.com\" <advanilparab.office@gmail.com>, sanjay_upadhyay@outlook.com, \"info@ravindraphatak.com\" <info@ravindraphatak.com>, \"mipravindarekar@gmail.com\" <mipravindarekar@gmail.com>, Arvind Sawant <arvindsawantg@gmail.com>, \"ADV.MADHAVI@gmail.com\" <ADV.MADHAVI@gmail.com>, \"milind.k.narvekar@gmail.com\" <milind.k.narvekar@gmail.com>, rautsanjay61@gmail.com, min.transport@maharashtra.gov.in, officeofmlaatul@gmail.com, Nilesh N Rane <reachnileshrane@gmail.com>";
 
+    var cc = "us-public@pmo.gov.in, edpsu@rb.railnet.gov.in, edpgmr@rb.railnet.gov.in, edpg@rb.railnet.gov.in, general@krcl.co.in";
 
-तांत्रिक मुद्दे विशद करणारी 
+    var bcc = "\"कोकण रेल्वे प्रवासी संघटना सावंतवाडी.\" <swaditerminus@gmail.com>";
 
-मुंबई आणि मंगळुरु ही दोन बंदरे जोडण्याच्या दृष्टीने रोहा ते मंगळुरु दरम्यान नवीन ब्रॉडगेज मार्ग बांधण्यासाठी केंद्रीय रेल्वे मंत्रालय, महाराष्ट्र, गोवा, कर्नाटक आणि केरळ राज्य शासनांच्या संयुक्त विद्यमाने कोकण रेल्वे महामंडळाची स्थापना १९९० मध्ये करण्यात आली. १५ वर्षांनंतर किंवा सर्व देणी देऊन झाल्यावर यांपैकी जे आधी होईल तेव्हा हे महामंडळ भारतीय रेल्वेत विलीन होणे अपेक्षित होते. त्यानुसार वर्ष २००८-०९ मध्ये विलीनीकरण होण्याची शक्यता असताना केंद्र शासनाने सर्व देणी देऊन झाल्यावरही हे महामंडळ स्वतंत्रच राहील असे प्रथम आर्थिक पुनर्रचना प्रस्तावात ठरवले.
+    const randomIndex = Math.floor(Math.random() * subjects.length);
+    const subject = subjects[randomIndex];
 
-आदरणीय पंतप्रधान श्री. नरेंद्र मोदी यांच्या नेतृत्वाखाली २०१४ पासून भारतीय रेल्वेत आधुनिकीकरण व क्रांती सुरु असताना कोकण मात्र त्यापासून वंचित आहे. त्यामुळे आदरणीय पंतप्रधानांच्या प्रतिमेला धक्का बसतो. कोकण रेल्वे भारतीय रेल्वेचा भाग नसून स्वतंत्र महामंडळ असल्यामुळे हे घडते. केंद्रीय अर्थसंकल्पातून कोकण रेल्वेला निधी मिळत नाही. त्यांना पायाभूत सुविधांच्या सुधारणेसाठी लागणाऱ्या निधीकरिता राज्य शासनाकडून मिळालेला निधी व बाहेरील कर्जांवर अवलंबून राहावे लागते.
+    var body = `प्रति,माननीय मुख्यमंत्री, महाराष्ट्र राज्य.माननीय रेल्वे मंत्री, भारत सरकार.माननीय खासदार, आमदार (कोकण विभाग).माननीय प्रधान सचिव, महाराष्ट्र राज्य.माननीय व्यवस्थापक, रेल्वे बोर्ड, भारत सरकार.माननीय व्यवस्थापकीय संचालक, कोकण रेल्वे महामंडळ.माननीय व्यवस्थापकीय संचालक, महाराष्ट्र पर्यटन विकास महामंडळ.
+        विषय - सावंतवाडी रेल्वे टर्मिनस(प्रस्तावित लोकमान्य मधु दंडवते रेल्वे टर्मिनस) चे प्रलंबित काम, नव्याने कोचिंग केअर कॉम्प्लेक्स मंजूर करणे. तसेच अमृत भारत स्थानक योजनेत' समावेश आणि नवीन गाड्यांच्या मंजुरीबाबत - सविस्तर सूक्ष्मनियोजन व कृती आराखडा. संदर्भ - दिनांक २७ जून २०१५ रोजी सावंतवाडी रेल्वे टर्मिनस प्रकल्पाचा भूमिपूजन सोहळा.आदरणीय महोदय,सस्नेह जयमहाराष्ट्र..! दक्षिण कोकणचे आणि पर्यायाने राज्याचे एक प्रमुख पर्यटन आणिव्यावसायिक प्रवेशद्वार असलेल्या सावंतवाडी रेल्वे स्थानकाचे रूपांतर अत्याधुनिकटर्मिनसमध्ये करण्याची प्रक्रिया गेल्या दशकभरापासून विविध टप्प्यांत सुरू आहे. त्यालाच अनुसरून कोकणासाठी प्रस्तावित या सावंतवाडी रेल्वे टर्मिनसचा भूमिपूजन सोहळ्याला आज ११ वर्षे पूर्ण झाली आहेत.२६ मे २०२६रोजी राज्य मंत्रिमंडळाने या टर्मिनसला कोकण रेल्वेचे शिल्पकार 'लोकमान्य मधूदंडवते' यांचे नाव देण्याचा जो ऐतिहासिक निर्णय घेतला आहे, त्याबद्दलसमस्त कोकणवासीयांच्या वतीने शासनाचे मनःपूर्वक आभार. परंतु, याप्रकल्पाच्या सद्यस्थितीचे तांत्रिक आणि प्रशासकीय विश्लेषण केले असता असेनिदर्शनास येते की, हा प्रकल्प विविध शासकीय विभागांमध्ये विभागला गेला असून,आंतरविभागीयसमन्वयाच्या पूर्ण अभावामुळे आणि लालफितीच्या कारभारामुळे कोट्यवधी रुपयांचा निधीउपलब्ध असूनही प्रकल्पाची गती अत्यंत निराशाजनक आहे. या प्रकल्पाला गती देण्यासाठी आणि संपूर्ण कोकणवासीयांच्यावाढत्या प्रवासी गरजा पूर्ण करण्यासाठी, या संपूर्ण प्रकल्पाचेसूक्ष्म नियोजन (Micro-planning) करून केंद्र सरकार आणि राज्य सरकार यांच्याअखत्यारीत येणाऱ्या कामांचे वर्गीकरण खालीलप्रमाणे करण्यात आले आहे. संबंधितप्रशासकीय विभागांनी आपापल्या जबाबदाऱ्या प्राधान्याने पूर्ण कराव्यात ही विनंती. A. केंद्र शासनाच्या / रेल्वे मंत्रालयाच्या / कोकण रेल्वेच्या अधीन असणारीप्राधान्य कामे (Actionable Points for Central Govt / Ministry ofRailways & KRCL) :- १. सावंतवाडी टर्मिनसच्या दुसऱ्या टप्प्याची (Phase2) पूर्तता करणेतसेच याठिकाणी या टर्मिनस प्रकल्पाची क्षमता वाढवण्यासाठी अतिरिक्त रेल्वे रुळ, फलाट आणि ROB मंजूर करणे.२. या प्रकल्पाचा समावेश केंद्राच्या महत्त्वाकांक्षी 'गती शक्ती'(PMGS-NMP) योजनेत समावेशकरणे.३. सावंतवाडी येथे रेल्वेचे 'कोचिंग केअर कॉम्प्लेक्स'(Coach Care Complex) मंजूर करणे, जेणेकरून मुंबई साठी केवळ कोकण मर्यादित गाड्यासोडण्यात येतील.४. सावंतवाडी स्थानकाचा 'अमृत भारत स्टेशन योजनेत'समावेश करणे.५. मागच्या वर्षी प्रमाणे यंदाच्या गणेशोत्सवात देखील केवळ कोकण मर्यादित गाड्या (मुंबई ते रत्नागिरी / सावंतवाडी) सोडण्याचे नियोजन करणे.६. सावंतवाडी स्थानकावर लांब पल्ल्याच्या गाड्यांना थांबा देण्याबाबत कार्यवाही करणे.A. १२१३३/१२१३४ सीएसएमटी-मंगळुरू एक्सप्रेस (CSMT -MangaloreExpress)B. २२२२९/२२२३० मुंबई-मडगाव वंदे भारत एक्सप्रेस (CSMT -MadgaonVB Express)C. १२४४९/५० गोवा संपर्क क्रांती एक्सप्रेस (GoaSampark Kranti Express)D. २२६५५/५६ एर्नाकुलम - निझामुद्दीन एक्सप्रेस (Ernakulam- Nizamuddin Express)E. २२६५३/५४ तिरुवनंतपुरम - निझामुद्दीन एक्सप्रेस (Thiruvananthapuram- Nizamuddin Express) ७. सावंतवाडी स्थानकाचे नामांतर 'लोकनेते मधु दंडवते टर्मिनस सावंतवाडी ' असे होण्यासाठी महाराष्ट्र राज्य सरकारने पाठवलेल्या प्रस्तावावर कार्यवाही करणे.८. कोकणी जनतेच्या सुलभ आणि सोयीस्कर प्रवासासाठी मुंबई - सावंतवाडी, वसई - सावंतवाडी, पुणे - कल्याण - सावंतवाडी, नांदेड - सावंतवाडी तसेच कुंभमेळ्याच्या पार्श्वभूमीवर मनमाड ते सावंतवाडी आदी गाड्यांचे नियोजन करणे.
+B. महाराष्ट्र राज्य शासनाच्या अधीन असणारी प्राधान्य कामे (Actionable Points for State Govt of Maharashtra) :- सावंतवाडी टर्मिनस या प्रकल्पाला राज्याचा 'एकात्मिक पायाभूत सुविधा प्रकल्प' म्हणून अधिकृत दर्जा देणे तसेच हा प्रकल्प मित्रा (MITRA) या राज्य अभिसरणाकडे वर्ग करणे. महाराष्ट्र पर्यटन विकास महामंडळ (MTDC) आणि कोकण रेल्वे महामंडळ यांच्यातील सावंतवाडी स्थानकावर प्रस्तावित रेल हॉटेल (बजेट हॉटेल) प्रकल्पा संदर्भातील सामंजस्य कराराची पूर्तता करणे. सावंतवाडी रेल्वे टर्मिनस प्रकल्पाकरिता अत्यावश्यक असलेल्या तिलारी आंतरराज्य धरणातून ५.४६ कोटींच्या पाणीपुरवठा योजनेला प्रशासकीय मान्यता देण्यात यावी किंवा सदर प्रकल्पाला इतर योजनेतून पाणीपुरवठा करण्यात यावा. सावंतवाडी स्थानकात विविध प्रवासी सुविधांसाठी चांदा ते बांदा योजना' व सिंधुरत्न समृद्धी योजनेच्या अंतर्गत ७.२० कोटींच्या अतिरिक्त सुविधांच्या (माननीय जिल्हाधिकारी,सिंधुदुर्ग यांचे कडे प्रलंबित असलेल्या) प्रस्तावाची अंमलबजावणी करणे. वर नमूद केलेल्या सूक्ष्म नियोजनानुसार, केंद्र आणिराज्य शासनाच्या संबंधित विभागांनी परस्पर समन्वयाने (Inter-departmentalcoordination) कालबद्ध कृती आराखडा तयार करावा आणि वर्षानुवर्षे प्रलंबितअसलेल्या या प्रकल्पाला मूर्त स्वरूप द्यावे, ही नम्र विनंती. येत्या काही महिन्यांवर कोकणवासीयांचा आणि चाकरमान्यांचासर्वात मोठा 'गणेशोत्सव' येऊन ठेपला आहे. या काळात प्रवाशांची होणारीगैरसोय टाळण्यासाठी आणि कोकणच्या विशेषतः सिंधुदुर्ग जिल्ह्याच्या पर्यटनाला चालनादेण्यासाठी आपल्या स्तरावरून या प्रकल्पांना निश्चितच गती मिळेल, असा आम्हालापूर्ण विश्वास आहे. आपण या विषयात तातडीने लक्ष घालून सावंतवाडी रेल्वेटर्मिनसच्या कामाला गती द्यावी ही नम्र विनंती, जेणेकरून लाखो कोकणी जनतेलात्याचा फायदा होईल.
 
-संपूर्ण देशात केंद्रीय रेल्वे मंत्रालयाच्या अर्थसंकल्पातून रेल्वे विकास प्रकल्प सुरु असताना केवळ स्वतंत्र महामंडळ असल्यामुळे कोकणाला त्याचा लाभ न देणे अन्यायकारक आहे. ६ ऑगस्ट, २०२३ ला आदरणीय पंतप्रधान श्री. नरेंद्र मोदी यांनी उदघाटन केलेल्या अमृत भारत स्थानक योजनेत कोकण रेल्वेच्या रत्नागिरी विभागातील (म्हणजेच महाराष्ट्रातील) एकाही स्थानकाचा समावेश नाही.
-
-कोकण रेल्वे महामंडळाचे भारतीय रेल्वेत विलीनीकरण करण्याआधी ही कंपनी १००% मालकी हक्कांसहित केंद्र शासनाच्या अखत्यारित येणे आवश्यक आहे. त्यासाठी संबंधित राज्य शासनांनी त्यांचे समभाग केंद्रीय रेल्वे मंत्रालयाच्या स्वाधीन केले पाहिजेत असे खासदार श्री. कोटा श्रीनिवास पुजारी व खासदार श्री. धैर्यशील पाटील यांनी संसदेत विचारलेल्या प्रशांत उत्तर देताना केंद्रीय रेल्वे मंत्री श्री. अश्विनी वैष्णव यांनी सांगितले.
-
-म्हणून, कोकण रेल्वेचे भारतीय रेल्वेत विलीनीकरण करण्याच्या प्रस्तावाला महाराष्ट्राच्या वतीने मान्यता मिळणे आवश्यक आहे. त्यासाठी गरज पडल्यास महाराष्ट्राच्या ताब्यात आता असलेले ३९६.५४२५ कोटी रुपयांचे समभाग कोणत्याही मोबदल्याची अपेक्षा न ठेवता केंद्रीय रेल्वे मंत्रालयाला सुपूर्द करावेत. ते केल्यानंतर कोकण रेल्वे केंद्र शासनाच्या ताब्यातील सार्वजनिक क्षेत्रातील उपक्रम न राहता ताबडतोब भारतीय रेल्वेत विलीन केले जाईल याबाबत केंद्रीय रेल्वे मंत्रालयाकडून लेखी हमी घ्यावी.
-
-तरी, आपण याबाबतीत येत्या अधिवेशनात आवाज उठवावा ही नम्र विनंती.`;
-  
-  
-
+आपले विनीत,`;
 
     var emailLink = "mailto:" + encodeURIComponent(recipients) +
                     "?cc=" + encodeURIComponent(cc) +
@@ -131,25 +105,24 @@ const subjects = [
 
     // Construct the mailto link
     emailLink = `mailto:${encodeURIComponent(recipients)}?cc=${encodeURIComponent(cc)}&bcc=${encodeURIComponent(bcc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+
     // Debugging: Log the link
     console.log("CC:", cc);
     console.log("Generated email link:", emailLink);
 
+    // Create and click the temporary link
+    try {
+        const tempLink = document.createElement('a');
+        tempLink.href = emailLink;
+        document.body.appendChild(tempLink);
+        tempLink.click();
 
-  // Create and click the temporary link
-  try {
-    const tempLink = document.createElement('a');
-    tempLink.href = emailLink;  
-    document.body.appendChild(tempLink);
-    tempLink.click();
-    document.body.removeChild(tempLink);
-    console.log("Email client triggered");
-} catch (error) {
-    console.error("Failed to trigger email client:", error);
-}
-    // Clean up
-    document.body.removeChild(tempLink);
+        // Clean up inside the block where tempLink exists
+        document.body.removeChild(tempLink);
+        console.log("Email client triggered");
+    } catch (error) {
+        console.error("Failed to trigger email client:", error);
+    }
 });
 
   
