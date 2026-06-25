@@ -32,16 +32,14 @@ const imagePaths = [
     'images/banner/ban9.jpg',
     'images/banner/ban10.jpg'
 ];
-
 // Preload images
 function preloadImage(src) {
     const img = new Image();
     img.src = src;
-
 }
 
-// Preload the first image
-preloadImage(imagePaths[0]);
+// Preload ALL images in the array for a smooth slideshow
+imagePaths.forEach(preloadImage);
 
 let currentIndex = 0;
 
@@ -82,11 +80,75 @@ emailbutton.addEventListener('click', function (event) {
 
     console.log("email section");
 
-    var recipients = "Shri. Eknath Sambhaji Shinde (Chief Minister) <Cm@maharashtra.gov.in>, cmoffice-mh@nic.in, dcm@maharashtra.gov.in, dycm@maharashtra.gov.in, mr@rb.railnet.gov.in, \"crb@rb.railnet.gov.in\" <crb@rb.railnet.gov.in>, narayanrane52@gmail.com, narayan.rane@mpls.sansad.in, nareshmhaske.mp@sansad.nic.in, waikarravindra@gmail.com, cs@maharashtra.gov.in, sec.cm@maharashtra.gov.in, acs.transport@maharashtra.gov.in, divcom.konkan@maharashtra.gov.in, piyush.goyal@gov.in, sunil.tatkare7@gmail.com, sd.patil@mpls.sansad.in, Varsha Gaikwad <gaikwad.varsha3@gmail.com>, shrikant.shinde@sansad.nic.in, ceo-mitra@mah.gov.in, Sagar.kadu@gov.in, officeofmr@gov.in, mosr@rb.railnet.gov.in, office.mosrs@gov.in, secy.rb-mh@nic.in, mi@rb.railnet.gov.in, \"MD@maharashtratourism.gov.in\" <MD@maharashtratourism.gov.in>, anil.desai@sansad.nic.in, niranjanvdavkhare@gmail.com, Pramod Jathar <psjathar03@gmail.com>, ashish.shelar@yahoo.com, kesarkardeepak@gmail.com, nnr23682@gmail.com, Cmd@krcl.co.in, cpro@krcl.co.in, collector.sindhudurg@maharashtra.gov.in, Sulbhagaikwad142@gmail.com, \"MP Palghar Dr. Hemant Savara\" <hemantsavara5@gmail.com>, Sneha Dube Pandit <Snehadubepandit.jansampark@gmail.com>, \"sanjaypotnis1@gmail.com\" <sanjaypotnis1@gmail.com>, \"anild0205@gmail.com\" <anild0205@gmail.com>, amdarmaheshsawant@gmail.com, anantbnaroffice@gmail.com, mlarajannaik@gmail.com, ravindrachavan.mla@gmail.com, kumar ailani <mlakumarailani141@gmail.com>, sureshmhatre1701@gmail.com, mp.medha@sansad.nic.in, Medhakulkarnibjp@gmail.com, shrikantshinde87@yahoo.in, Supriya Sule <supriyassule@gmail.com>, spofficemail@yahoo.com, \"advanilparab.office@gmail.com\" <advanilparab.office@gmail.com>, sanjay_upadhyay@outlook.com, \"info@ravindraphatak.com\" <info@ravindraphatak.com>, \"mipravindarekar@gmail.com\" <mipravindarekar@gmail.com>, Arvind Sawant <arvindsawantg@gmail.com>, \"ADV.MADHAVI@gmail.com\" <ADV.MADHAVI@gmail.com>, \"milind.k.narvekar@gmail.com\" <milind.k.narvekar@gmail.com>, rautsanjay61@gmail.com, min.transport@maharashtra.gov.in, officeofmlaatul@gmail.com, Nilesh N Rane <reachnileshrane@gmail.com>";
+var recipients = [
+    "Cm@maharashtra.gov.in",
+    "cmofficemh@nic.in",
+    "dcm@maharashtra.gov.in",
+    "dycm@maharashtra.gov.in",
+    "mr@rb.railnet.gov.in",
+    "crb@rb.railnet.gov.in",
+    "narayanrane52@gmail.com",
+    "narayan.rane@mpls.sansad.in",
+    "nareshmhaske.mp@sansad.nic.in",
+    "waikarravindra@gmail.com",
+    "cs@maharashtra.gov.in",
+    "sec.cm@maharashtra.gov.in",
+    "acs.transport@maharashtra.gov.in",
+    "divcom.konkan@maharashtra.gov.in",
+    "piyush.goyal@gov.in",
+    "sunil.tatkare7@gmail.com",
+    "sd.patil@mpls.sansad.in",
+    "gaikwad.varsha3@gmail.com",
+    "shrikant.shinde@sansad.nic.in",
+    "ceo-mitra@mah.gov.in",
+    "Sagar.kadu@gov.in",
+    "officeofmr@gov.in",
+    "mosr@rb.railnet.gov.in",
+    "office.mosrs@gov.in",
+    "secy.rb-mh@nic.in",
+    "mi@rb.railnet.gov.in",
+    "MD@maharashtratourism.gov.in",
+    "anil.desai@sansad.nic.in",
+    "niranjanvdavkhare@gmail.com",
+    "psjathar03@gmail.com",
+    "ashish.shelar@yahoo.com",
+    "kesarkardeepak@gmail.com",
+    "nnr23682@gmail.com",
+    "Cmd@krcl.co.in",
+    "cpro@krcl.co.in",
+    "collector.sindhudurg@maharashtra.gov.in",
+    "Sulbhagaikwad142@gmail.com",
+    "hemantsavara5@gmail.com",
+    "Snehadubepandit.jansampark@gmail.com",
+    "sanjaypotnis1@gmail.com",
+    "anild0205@gmail.com",
+    "amdarmaheshsawant@gmail.com",
+    "anantbnaroffice@gmail.com",
+    "mlarajannaik@gmail.com",
+    "ravindrachavan.mla@gmail.com",
+    "mlakumarailani141@gmail.com",
+    "sureshmhatre1701@gmail.com",
+    "mp.medha@sansad.nic.in",
+    "Medhakulkarnibjp@gmail.com",
+    "shrikantshinde87@yahoo.in",
+    "supriyassule@gmail.com",
+    "spofficemail@yahoo.com",
+    "advanilparab.office@gmail.com",
+    "sanjay_upadhyay@outlook.com",
+    "info@ravindraphatak.com",
+    "mipravindarekar@gmail.com",
+    "arvindsawantg@gmail.com",
+    "ADV.MADHAVI@gmail.com",
+    "milind.k.narvekar@gmail.com",
+    "rautsanjay61@gmail.com",
+    "min.transport@maharashtra.gov.in",
+    "officeofmlaatul@gmail.com",
+    "reachnileshrane@gmail.com"
+].join(", ");
 
     var cc = "us-public@pmo.gov.in, edpsu@rb.railnet.gov.in, edpgmr@rb.railnet.gov.in, edpg@rb.railnet.gov.in, general@krcl.co.in";
 
-    var bcc = "\"कोकण रेल्वे प्रवासी संघटना सावंतवाडी.\" <swaditerminus@gmail.com>";
+    var bcc = "swaditerminus@gmail.com>";
 
     const randomIndex = Math.floor(Math.random() * subjects.length);
     const subject = subjects[randomIndex];
